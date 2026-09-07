@@ -4,12 +4,17 @@ from course_lab import fk, ik
 from algorithm_lab import jacobian
 
 
-def main():
+def main(smoke_test=False):
     try:
         import tkinter as tk
     except ImportError as exc:
         raise SystemExit("Tkinter is unavailable. Use the PNG figures and algorithm_lab.py instead.") from exc
-    root = tk.Tk()
+    try:
+        root = tk.Tk()
+    except tk.TclError as exc:
+        raise SystemExit("Tk desktop initialization failed. Check the Python Tcl/Tk installation with 'python -m tkinter', or use assets/figures and algorithm_lab.py.\n" + str(exc)) from exc
+    if smoke_test:
+        root.withdraw()
     root.title("两连杆运动学自学实验（仅二维几何）")
     canvas = tk.Canvas(root, width=720, height=620, bg="#f8fafc")
     canvas.pack()
@@ -66,8 +71,27 @@ def main():
     tk.Label(root, textvariable=message).pack()
     tk.Label(root, text="点击画布设目标；虚线是几何可达边界。没有真实关节限位、碰撞或姿态约束。").pack()
     draw()
+    if smoke_test:
+        from types import SimpleNamespace
+        click(SimpleNamespace(x=origin[0]+.3*scale, y=origin[1]-.2*scale))
+        assert len(state["solutions"]) == 2
+        first = [v.get() for v in variables]
+        switch()
+        assert first != [v.get() for v in variables]
+        assert math.dist(fk(*[math.radians(v.get()) for v in variables]), (.3, .2)) < 1e-10
+        click(SimpleNamespace(x=origin[0]+.6*scale, y=origin[1]))
+        assert not state["solutions"]
+        variables[0].set(45)
+        draw()
+        root.update_idletasks()
+        root.destroy()
+        print("Tk smoke test passed: target, branches, unreachable target, slider redraw")
+        return
     root.mainloop()
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--smoke-test", action="store_true")
+    main(parser.parse_args().smoke_test)

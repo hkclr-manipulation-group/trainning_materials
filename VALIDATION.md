@@ -1,0 +1,18 @@
+# 自学资料验证记录
+
+日期：2026-09-07，Windows / Python 3.10。
+
+| 验证 | 结果 |
+|---|---|
+| `python labs/course_lab.py all` | 六个基础实验运行成功 |
+| `python labs/algorithm_lab.py all` | 五个算法实验运行成功，IK收敛、A*代价19、轨迹2.5秒 |
+| `python -m unittest discover -s tests -v` | 29项测试通过 |
+| Markdown相对链接 | 33份Markdown检查时无失效本地链接；图示路径均存在 |
+| 图片 | 14组PNG/SVG已生成，抽查两连杆、雅可比、感知链与PID图的中文显示 |
+| 教学数据 | pcap含4帧，IPv4长度与校验正确；SPI上升沿数据为A5 |
+| 教学URDF | XML可解析，2个转动关节、1个固定工具关节 |
+| 原生窗口 | 点击目标、切换分支、环外目标和滑块重绘的隐藏窗口检查通过 |
+
+本机原有Tcl脚本路径无法直接初始化，因此窗口检查使用复制到工作区build目录的同一套已安装Tcl/Tk运行时，并仅在测试进程中设置TCL_LIBRARY/TK_LIBRARY。没有把该绝对路径或运行时加入课程依赖。普通Python安装需带可用Tcl/Tk；故障处理见 [工具说明](TOOLS.md)。
+
+未执行真机控制、GPU求解、完整机器人策略训练或Wireshark界面操作。pcap使用独立字节解析检查，基础自学也可直接读CSV。算法讲解中没有本地实现的项目在 [算法地图](handbook/ALGORITHMS.md) 明确标注。

@@ -1,0 +1,6 @@
+time_s,direction,sequence,angle_rad,note
+0.0,TX,7,0.25,new command
+0.02,RX,7,0.25,fresh feedback
+0.04,RX,7,0.25,duplicate; does not refresh freshness in this exercise
+0.06,TX,8,0.3,next command
+0.181,CHECK,8,,last fresh RX at .020; age .161s

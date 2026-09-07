@@ -1,6 +1,6 @@
 # 工具使用：先完成任务，再增加工具
 
-基础路线只安装 Python 和编辑器，Git 用于版本练习。CAD 可使用团队已有软件。ROS、CUDA、仿真器和硬件抓包设备作为演示或进阶项，避免把第一周变成环境安装课。
+基础路线只安装Python和编辑器，Git用于版本练习。CAD可用已有软件。ROS、CUDA、仿真器和硬件抓包设备作为可选进阶项。自学工具数据见 [算法与通信实验](labs/ALGORITHMS.md)，无设备也能完成主线。
 
 ## 1. 本机环境：Windows 主线
 
@@ -34,16 +34,16 @@ PowerShell 常用 `Get-Location`、`Get-ChildItem`、`Get-Content -Encoding UTF8
 
 Git 练习在自己的仓库分支完成：`git status` → `git switch -c training/my-first-change` → 改一行注释 → `git diff` → `git add labs/course_lab.py` → `git diff --cached` → 提交。运行前确认分支名未占用；只暂存此次改动。Git 记录和恢复版本的概念见 [官方 Pro Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)。
 
-## 3. 工程工具演示卡
+## 3. 工程工具自主练习卡
 
-| 工具 | 解决的问题 | 20–30 分钟操作任务 | 环境 |
+| 工具 | 解决的问题 | 自主操作任务 | 环境 |
 |---|---|---|---|
 | CMake + 编译器 | 配置并构建 C/C++ 项目 | 区分 configure、build、test 的输出 | 编译器须另行准备 |
-| Wireshark | 网络报文观察 | 打开讲师提供的 pcap，使用 `udp` 显示过滤器，定位端口与时间差 | 无 pcap 时只做界面演示 |
+| Wireshark | 网络报文观察 | 打开 `labs/data/teaching_udp.pcap`，用 `udp.port == 5000` 显示过滤器查看4帧 | 无软件时使用同目录CSV |
 | CAN 厂商工具 / SocketCAN | 观察 CAN 帧和错误 | 读一份离线日志，核对 ID、长度和字节 | 实际驱动依平台和适配器 |
 | STM32CubeMX / 调试器 | 外设配置和固件调试 | 阅读工程时钟、SPI、CAN 配置及启动代码 | 不要求学员刷写板卡 |
-| 逻辑分析仪 / 示波器 | 数字时序 / 电气波形 | 比较 SPI 片选与时钟；区分协议错误和信号问题 | 讲师预备记录 |
-| ROS 2 / RViz | 节点接口、坐标和可视化 | 解释 topic/service/action，观察 TF 树 | 使用已准备的 ROS 环境 |
+| 逻辑分析仪 / 示波器 | 数字时序 / 电气波形 | 用表格画 `labs/data/spi_mode0.csv`，按上升沿读A5；理解何时需要仪器 | 自带合成数据，仪器可选 |
+| ROS 2 / RViz | 节点接口、坐标和可视化 | 先解释topic/service/action，再在可选环境中观察TF树 | 第一周不要求安装 |
 | MuJoCo | 动力学与接触仿真 | 区分模型参数与运行状态，观察仿真步进 | 可选独立环境 |
 | AI 编程助手 | 解释、修改与评审代码 | 用任务模板完成一个边界处理改动 | 依团队可用工具 |
 
@@ -66,3 +66,9 @@ ROS 2 的 topic 适合持续数据流，service 适合短请求响应，action �
 在 `collision_shpere_generation` 项目自己的环境中按 README 安装 `python -m pip install -e ".[viewer]"`，运行 viewer。需要桌面、Qt 和 OpenGL。工作空间 GPU 计算另需相容的 cuRobo/CUDA 环境；不要把这些依赖装进本课程标准库实验环境。
 
 工具使用记录至少写下：操作系统、工具版本、工作目录、命令、输入、预期、实际结果。界面按钮位置或依赖版本随工具更新，按 [来源索引](SOURCES.md) 核对对应版本。
+
+## 5. 原生交互窗口故障处理
+
+运行`python labs/kinematics_explorer.py`。若提示没有tkinter或找不到init.tcl，先执行`python -m tkinter`验证当前Python的Tcl/Tk组件，检查是否使用了预期解释器。Windows可修复Python安装中的Tcl/Tk组件，Linux通常需系统对应的Tk包；按你的平台处理，不要复制别人电脑的绝对路径到项目。
+
+如果当前环境没有桌面或暂时无法修复，直接使用 [PNG图示](assets/README.md) 和 `algorithm_lab.py`完成同样的概念与数值实验。核心课程不依赖GUI环境。

@@ -10,7 +10,7 @@
 | CAD | [FreeCAD 官方手册](https://www.freecad.org/manual/a-freecad-manual.pdf) | 参数化设计与基本操作 | 两连杆草图；手册较早，界面按版本核对 |
 | 运动学 | [Modern Robotics 4.1.1](https://modernrobotics.northwestern.edu/nu-gm-book-resource/4-1-1-product-of-exponentials-formula-in-the-space-frame/) | 空间参考系与 FK 的输入输出 | 两连杆 FK/IK；指数积推导为进阶 |
 | CAN | [Linux 内核 SocketCAN](https://www.kernel.org/doc/html/latest/networking/can.html) | 帧、过滤、错误和 CAN FD | 教学载荷的字段与边界 |
-| 网络观察 | [Wireshark 用户手册](https://www.wireshark.org/docs/wsug_html_chunked/index.html) | 主窗口、打开文件、过滤 | 离线 pcap 演示 |
+| 网络观察 | [Wireshark 用户手册](https://www.wireshark.org/docs/wsug_html_chunked/index.html) | 主窗口、打开文件、过滤 | 随仓库pcap自主练习 |
 | 构建 | [CMake 官方教程](https://cmake.org/cmake/help/latest/guide/tutorial/index.html) | 配置、构建、测试基本流程 | 可选模拟 C 项目构建 |
 | ROS 2 | [Topics / Services / Actions](https://docs.ros.org/en/jazzy/How-To-Guides/Topics-Services-Actions.html) | 接口选择原则 | 为反馈、配置、长动作选择接口 |
 | 相机标定 | [OpenCV 4.12 标定教程](https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html) | 内参、畸变与误差 | 像素到三维的坐标链 |
@@ -19,4 +19,22 @@
 
 Python、SocketCAN、Pro Git、Modern Robotics 页面正文已读取；其余来源通过官方页面或官方搜索结果核对。ROS URDF 教程直连受网站访问保护，未把其受阻页面当作已读取依据；本课 URDF 内容主要结合团队实际模型和机器人基础概念编写。
 
-上游 `latest`、`stable`、`main` 页面可能变化，授课前检查链接和安装版本。课程不统一推荐“所有工具升级到最新”，应先满足当前项目的兼容约束。团队资料入口和证据范围见 [PROJECT_MAP.md](PROJECT_MAP.md)。
+上游 `latest`、`stable`、`main` 页面可能变化，使用前核对链接和安装版本。先满足当前项目兼容约束，不要求所有工具升级到最新。团队资料入口与证据范围见 [PROJECT_MAP.md](PROJECT_MAP.md)。
+
+## 自学扩充：算法原始资料
+
+以下用于核对方法和继续深入，正文已提供独立例题和本地图片，不要求逐页阅读才能完成主线。
+
+| 资料 | 推荐关注 | 本课对应 |
+|---|---|---|
+| [Modern Robotics 数值IK](https://modernrobotics.northwestern.edu/nu-gm-book-resource/6-2-numerical-inverse-kinematics-part-1-of-2/) | 局部线性化、迭代与初值 | 运动学手册；二维DLS为课程自建 |
+| [OMPL规划器目录](https://ompl.kavrakilab.org/planners.html) | PRM、RRT、Connect、RRT*的区别 | 规划手册与算法地图 |
+| [MIT LQR](https://underactuated.mit.edu/lqr.html) | 线性模型、状态反馈和二次代价 | 控制进阶 |
+| [MIT轨迹优化](https://underactuated.mit.edu/trajopt.html) | 决策变量、动态约束和优化 | 规划与MPC背景 |
+| [OpenCV calib3d](https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html) | 投影、PnP、RANSAC和手眼接口的定义 | 感知与标定 |
+| [Open3D ICP](https://www.open3d.org/docs/release/tutorial/pipelines/icp_registration.html) | 初值、对应与迭代配准 | 估计进阶 |
+| [ACT作者论文](https://tonyzhaozh.github.io/aloha/aloha.pdf) | 动作分块和Transformer策略 | 模仿学习导读 |
+| [Diffusion Policy作者项目](https://diffusion-policy.cs.columbia.edu/) | 条件动作扩散与执行过程 | 模仿学习导读 |
+| [PPO教学](https://spinningup.openai.com/en/latest/algorithms/ppo.html)、[SAC教学](https://spinningup.openai.com/en/latest/algorithms/sac.html) | 采样、策略更新、回放与熵 | 强化学习导读，旧安装命令不直接沿用 |
+
+Modern Robotics、OMPL、MIT、OpenCV和Open3D的页面正文已读取；ACT、Diffusion Policy及PPO/SAC通过作者/官方搜索结果核对。图示均由本仓库代码制作，没有直接复制论文插图。

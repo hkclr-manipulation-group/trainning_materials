@@ -1,5 +1,9 @@
 # 第四天：运动学、轨迹与反馈控制
 
+深入自学：[运动学推导](../handbook/02_kinematics.md)、[动力学与控制](../handbook/03_control.md)。按 [算法实验](../labs/ALGORITHMS.md) 运行数值IK、PID与轨迹。
+
+![雅可比与奇异](../assets/figures/jacobian.png)
+
 目标：计算一个简单机器人末端位置，理解控制循环为何需要测量、周期和约束。
 
 ## 1. 坐标和正逆运动学

@@ -10,7 +10,7 @@
 | 工作空间 | [robot_workspace_dexterous](../robot_workspace_dexterous/README.md) | 校验、诊断、采样和过滤 | CPU 诊断不能替代 GPU IK |
 | SDK | [spark2_sdk](../spark2_sdk/README.md) | Python/C++ 分发、配置入口 | 原生模块与解释器 ABI 需匹配 |
 | 运动学示例 | [calculate_kinematics.py](../spark2_sdk/spark2_python_dist/examples/calculate_kinematics.py) | seed、success、FK 复算 | SDK 输入单位单独核实 |
-| 运动示例 | [move_point.py](../spark2_sdk/spark2_python_dist/examples/move_point.py) | 状态、使能、运动、反馈顺序 | 包含真实硬件控制调用，课堂静态阅读 |
+| 运动示例 | [move_point.py](../spark2_sdk/spark2_python_dist/examples/move_point.py) | 状态、使能、运动、反馈顺序 | 包含真实硬件调用，入门阶段静态阅读 |
 | 应用验收 | [spark2_auto_test](../spark2_auto_test/README.md) | Python/C++ 测试职责、报告 | 这些验收并非都可脱机运行 |
 | 桥接固件 | [USB-CAN 拓扑](../usb2can/docs/hardware_topology.md) | 主机通道 → SPI → F446 → CAN 映射 | 根 README 与实现可能不同步 |
 | 电机通信应用 | [vision_robotics_skin_demo](../vision_robotics_skin_demo/README.md) | 协议库、控制器、学习客户端边界 | 型号和 CAN ID 以当前实现为准 |

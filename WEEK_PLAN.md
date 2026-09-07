@@ -6,11 +6,11 @@
 |---|---|---|---|---|
 | 1 | [系统、单位与编程](lessons/day01_system_and_code.md) | Python、终端、VS Code、Git | 系统图、单位实验、一次断点观察 | 能说清输入输出，解释度与弧度 |
 | 2 | [本体、CAD 与 URDF](lessons/day02_body_and_urdf.md) | CAD、XML、模型查看器 | 两连杆尺寸图、力矩估算、URDF 字段表 | 能核对坐标、质量、轴、限位 |
-| 3 | [通信与嵌入式](lessons/day03_communication.md) | struct、日志、协议表；抓包工具演示 | 一帧报文逐字节解读、超时实验 | 能区别传输成功和动作完成 |
+| 3 | [通信与嵌入式](lessons/day03_communication.md) | struct、日志、协议表、离线报文 | 一帧报文逐字节解读、超时实验 | 能区别传输成功和动作完成 |
 | 4 | [运动学与控制](lessons/day04_control.md) | Python、调试器、CSV | FK/IK 复算、闭环曲线、限速验证 | 能解释反馈、采样周期、饱和 |
 | 5 | [碰撞、工作空间与集成](lessons/day05_collision_workspace.md) | 原生 Python 查看器、配置、测试 | 一个碰撞案例报告、对照实验设计 | 能区别 IK 失败、碰撞拒绝与过滤 |
 | 6 | [感知、标定与机器人 AI](lessons/day06_perception_ai.md) | 数据表、相机模型、小型学习实验 | 坐标链、数据划分、模型误差报告 | 能识别泄漏，说明模型部署边界 |
-| 7 | [vibe coding 与工程交付](lessons/day07_vibe_coding.md) | AI 编程助手、Git diff、unittest | 可复现综合任务、评审记录、演示 | 别人按 README 能复现结果 |
+| 7 | [vibe coding 与工程交付](lessons/day07_vibe_coding.md) | AI编程助手、Git diff、unittest | 综合任务、自评与复现记录 | 自己在另一目录按README重跑成功 |
 
 ## 先修补课与学习深度
 
