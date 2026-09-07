@@ -2,6 +2,16 @@
 
 日期：2026-09-07，Windows / Python 3.10。
 
+交互课堂追加验证：2026-09-07至08。8本Notebook在各自新内核中执行，共43个代码块全部成功，无错误输出；结果保存在 `outputs/executed_notebooks/report.json` 和执行后的笔记副本中。第七天实际调用算法脚本并运行核心测试，35项通过。
+
+2026-09-08使用本机Edge进行浏览器实测：带令牌访问Jupyter、选择Training Python、执行入门笔记、将300修改为450并得到 `450 mm = 0.450 m`、保存后复读文件确认改动、滑块从30°变为31°且Python生成新的图像，全部通过。截图已人工查看，中文、代码、计算结果与曲线显示正常。记录在 `outputs/browser_smoke/report.json`；示例图收录于交互课堂说明。验证后关闭测试服务；未部署公共网站。
+
+启动器使用独立的会话运行目录，避免Windows普通账户与隔离测试账户复用具有不同访问权限的Jupyter登录文件。这个调整也在上述浏览器实测中验证。
+
+交互环境使用项目 `.venv`：JupyterLab 4.6.3、ipykernel 7.3.0、nbclient 0.11.0、nbformat 5.10.4、ipywidgets 8.1.7、jupyterlab-widgets 3.0.15、NumPy 1.24.4、Matplotlib 3.10.9。本机环境复用了已安装的系统包，另外将widget前端扩展安装到项目环境；文档中的新环境安装步骤不依赖这些本机路径。
+
+`python tools/check_learning_links.py` 覆盖43份Markdown和8本Notebook中的本地链接；最终检查347处链接时均存在。新增七天实验、工程细节与课程入口已经互相连接。命令行链接检查只验证路径存在，不验证每个网页或段落锚点。
+
 | 验证 | 结果 |
 |---|---|
 | `python labs/course_lab.py all` | 六个基础实验运行成功 |

@@ -40,3 +40,16 @@ Python、SocketCAN、Pro Git、Modern Robotics 页面正文已读取；其余来
 | [PPO教学](https://spinningup.openai.com/en/latest/algorithms/ppo.html)、[SAC教学](https://spinningup.openai.com/en/latest/algorithms/sac.html) | 采样、策略更新、回放与熵 | 强化学习导读，旧安装命令不直接沿用 |
 
 Modern Robotics、OMPL、MIT、OpenCV和Open3D的页面正文已读取；ACT、Diffusion Policy及PPO/SAC通过作者/官方搜索结果核对。图示均由本仓库代码制作，没有直接复制论文插图。
+
+## 可编辑Python课堂的官方依据（2026-09-07至08核对）
+
+| 官方资料 | 在课程中的用途 |
+|---|---|
+| [JupyterLab Notebook](https://jupyterlab.readthedocs.io/en/stable/user/notebook.html) | 文字、公式、代码、图像和交互输出组合；内核与文档的区别 |
+| [启动JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html) | 浏览器访问本机服务、课程工作目录 |
+| [JupyterLab终端](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html) | 终端与工具运行在服务所在机器 |
+| [ipywidgets交互函数](https://ipywidgets.readthedocs.io/en/stable/examples/Using%20Interact.html) | 滑块触发Python函数与输出更新 |
+| [nbclient执行](https://nbclient.readthedocs.io/en/latest/client.html) | 在新内核中完整验证Notebook |
+| [JupyterLite限制](https://jupyterlite.readthedocs.io/en/stable/troubleshooting.html) | 解释纯浏览器Python与完整本机Python的差异 |
+
+上述页面已读取。新增Notebook代码、讲解与图表为课程自建；这些来源用于核对平台行为，不是机器人硬件指标。更多工程技术说明见[工程细节](handbook/09_engineering_details.md)。

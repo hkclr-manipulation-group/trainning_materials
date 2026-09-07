@@ -1,5 +1,7 @@
 # 第五天｜终点能到，路上也可能撞到
 
+**边读边做：** [本日可编辑Python实验](../notebooks/05_collision_planning.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
+
 昨天找到了一些到达目标的角度。今天问两个新问题：这些姿态有没有碰撞？从现在走到目标的途中有没有碰撞？先把这两个问题分开。
 
 ## 第1步：用走廊理解路径

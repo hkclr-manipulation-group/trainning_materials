@@ -31,8 +31,10 @@ python3 -m venv .venv
 
 ## 2. 第一次操作：约10分钟
 
-1. 打开 [00_start_here.ipynb](notebooks/00_start_here.ipynb)，右上角选择 **Training Python**。下载后双击文件若只看到文本，说明还没有在 JupyterLab 中打开。
-2. 点击第一块准备代码，按 Shift+Enter；再运行毫米换米的代码，将300改为450，确认输出0.450。
+启动器每次创建独立的 `outputs/jupyter/runtime-*` 目录，登录文件由当前启动账户生成；不同账户或隔离环境的测试不会复用同一份登录文件。
+
+1. 打开 [00_start_here.ipynb](notebooks/00_start_here.ipynb)，右上角选择 **Training Python**。如果弹出 **Select Kernel**，在下拉框选 **Training Python** 再点 **Select**。下载后双击文件若只看到文本，说明还没有在 JupyterLab 中打开。
+2. 点击第一块准备代码，按 Shift+Enter；若刚选择了内核却没有输出，再运行一次。接着运行毫米换米的代码，将300改为450，确认输出0.450。
 3. 运行滑块代码，拖动角度，观察投影变化。图中的轴标为英文和单位，避免不同机器缺少中文字体。
 4. 从七天表格进入当日实验。先做默认值；每次只改一个参数，写下修改前的预测。
 5. 用 File → Save Notebook As 保存自己的版本。提交前执行 Kernel → Restart Kernel and Run All Cells，再 Ctrl+S。
@@ -40,6 +42,10 @@ python3 -m venv .venv
 `[*]`表示忙；方形停止按钮可中断。变量留在内核内存中，执行顺序未必等于页面顺序，重启再全跑可以发现这种隐藏依赖。修改 `labs` 源文件后也要重启或显式 reload，避免仍用旧导入。
 
 ## 3. 每天新增了哪些技术实验
+
+下面是本机实测画面：将角度从30°调到31°，Python重算后，图中的投影变为x≈0.2572m、y≈0.1545m。上方代码也能直接编辑。
+
+![浏览器中编辑Python并用滑块更新计算结果](assets/classroom_example.png)
 
 | Notebook | 技术内容 | 可观察输出 |
 |---|---|---|

@@ -1,5 +1,7 @@
 # 算法地图：先问问题，再选算法
 
+补充：[从算法公式到工程实现](09_engineering_details.md)，以及[可编辑运行的七天实验](../INTERACTIVE.md)。
+
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。
 
 本表中的“实现”仅指本培训仓库。介绍一种算法不代表实现、测试或部署过它。先读输入输出与限制，再决定是否深入。

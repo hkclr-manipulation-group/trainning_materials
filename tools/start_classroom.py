@@ -6,15 +6,19 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def environment():
     state = ROOT / "outputs" / "jupyter"
+    state.mkdir(parents=True, exist_ok=True)
+    # Each launching account needs its own securely written runtime files.
+    runtime = Path(tempfile.mkdtemp(prefix="runtime-", dir=state))
     locations = {"JUPYTER_CONFIG_DIR": state / "config",
                  "JUPYTER_DATA_DIR": state / "data",
-                 "JUPYTER_RUNTIME_DIR": state / "runtime",
+                 "JUPYTER_RUNTIME_DIR": runtime,
                  "IPYTHONDIR": state / "ipython"}
     env = os.environ.copy()
     for key, path in locations.items():

@@ -1,5 +1,7 @@
 # 第七天｜做一个自己能解释的小工具
 
+**边读边做：** [本日可编辑Python实验](../notebooks/07_tools_and_delivery.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
+
 前六天走过了本体、消息、运动、避障与学习。今天不增加大量新算法，而是把“输入→计算→检查→输出”做完整。
 
 ## 第1步：把需求写成看得见的结果
