@@ -1,0 +1,86 @@
+# %% [markdown]
+# # 第三天｜从一个角度到八个字节，再到有效反馈
+#
+# 本页使用自编的教学协议，**不是电机指令**。所有操作在内存或离线文件中完成。先读[通信手册](../handbook/08_communication.md)。
+#
+# 目标：手动拆包、理解精度、模拟重复反馈和超时。通信可理解为信件：总线搬运信封，协议规定信中每个位置的含义，状态机决定收到后能做什么。
+
+# %% [markdown]
+# ## 1. 字段长度、符号和字节顺序
+#
+# | 偏移 | 字节数 | 字段 | 约定 |
+# |---|---|---|---|
+# | 0 | 1 | 标记 | 0xA1 |
+# | 1 | 1 | 节点 | 1…255 |
+# | 2 | 2 | 序号 | uint16，小端 |
+# | 4 | 4 | 角度 | int32，小端，单位 mrad |
+#
+# 小端把低位字节放前面。0.25 rad → 250 mrad → 十六进制 FA → `fa 00 00 00`。`struct` 格式 `<BBHi` 中 `<` 是小端，B/H/i 是无符号8位、无符号16位、有符号32位。字段总长度 1+1+2+4=8。
+
+# %%
+angle_rad = .25  # 改为 -.25 或 .2504，观察字节和量化误差
+payload = encode_frame(1, 7, angle_rad)
+decoded = decode_frame(payload)
+print(payload.hex(" "), decoded)
+print("角度字段整数:", int.from_bytes(payload[4:8], "little", signed=True))
+print("量化误差 / rad:", decoded["angle_rad"] - angle_rad)
+assert abs(decoded["angle_rad"]-angle_rad) <= .0005 + 1e-12
+# 独立固定向量，不只依赖编解码互相配合。
+assert decode_frame(bytes.fromhex("a1 02 ff ff 06 ff ff ff"))["angle_rad"] == -.25
+
+# %% [markdown]
+# ## 2. 一个包通过检查，不等于整个通信可靠
+# 下面故意造短包和错误标记，应得到明确异常。实际总线还涉及仲裁、CRC、硬件错误与设备协议，本函数并未实现那些部分。
+# 编解码互相还原也可能“共同犯错”，所以要保留上面来自手算的固定字节向量。
+
+# %%
+for bad in (payload[:-1], b"\x00" + payload[1:]):
+    try:
+        decode_frame(bad)
+    except ValueError as error:
+        print("预期拒绝:", error)
+    else:
+        raise AssertionError("坏包不应被接受")
+
+# %% [markdown]
+# ## 3. 新鲜度由新的有效反馈决定
+# 教学规则：同一会话中，16位序号前進量 `delta=(new-old)%65536`，在 1…32767 才认为更新；0 是重复，≥32768 是旧包或歧义。这个比较要求相邻有效反馈跨度少于半个序号空间；设备重启要另建会话。
+# 用单调时钟计算接收年龄，避免系统时间被校准导致跳变。发送命令本身不能刷新反馈时间。
+
+# %%
+def newer(new, old):
+    delta = (new-old) % 65536
+    return 0 < delta < 32768
+
+assert newer(0, 65535) and not newer(7, 7) and not newer(6, 7)
+events = [(0.020, 7), (0.040, 7), (0.060, 6)]
+last_seq, last_rx = None, None
+for received_s, sequence in events:
+    accepted = last_seq is None or newer(sequence, last_seq)
+    if accepted:
+        last_seq, last_rx = sequence, received_s
+    print(received_s, sequence, "接受" if accepted else "忽略重复/旧包")
+now_s, timeout_s = .181, .100
+age_s = now_s - last_rx
+print("最后新反馈年龄 / ms:", 1000 * age_s)
+print("状态:", "READY" if feedback_fresh(age_s, timeout_s) else "STALE")
+assert abs(age_s - .161) < 1e-12 and not feedback_fresh(age_s, timeout_s)
+
+# %% [markdown]
+# ## 4. 数据流与线程之间需要什么接口
+#
+# ```mermaid
+# flowchart LR
+#   RX[接收字节] --> CHECK[长度/节点/序号检查]
+#   CHECK --> CACHE[带时间戳的状态快照]
+#   CACHE --> LOOP[控制周期读取快照]
+#   LOOP --> AGE{反馈过期?}
+#   AGE -->|是| STALE[标记故障并执行定义好的处置]
+#   AGE -->|否| COMPUTE[计算下一步]
+# ```
+#
+# 接收线程不要一边改 position 一边留下旧 timestamp 给控制线程读取；用锁、消息队列或不可变快照交接完整一组数据。协议里的设备时间与本机接收时间也不能直接相减，除非先做时间同步。
+#
+# **修改实验：** 最后加入 `(0.120,8)`，在 0.181 秒检查，应变成 61 ms、新鲜；删除全部反馈时，应是“尚未初始化”，不能当成零位置。
+#
+# **进阶：** 用 Wireshark 打开 `labs/data/teaching_udp.pcap`，过滤 `udp.port == 5000`，对照 payload；这只是用 UDP 文件装载教学字节，不代表真实 CAN 报文结构。控制周期与延迟预算见[技术细节第3节](../handbook/09_engineering_details.md)。
