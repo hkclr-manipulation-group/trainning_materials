@@ -1,0 +1,141 @@
+[
+  {
+    "file": "expected_results.json",
+    "sha256": "233a7816aae7f7c8557c251b017e6bffccfc161f2ffb06a6600940cd2176a2a5",
+    "kind": "synthetic_teaching"
+  },
+  {
+    "file": "filter_reference.csv",
+    "sha256": "66c3e81c6d9cdcc466e4b23cfccc7aa5f0a5f21581d50307475cfc5cddcc8dbf",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "step",
+      "truth",
+      "measurement",
+      "estimate",
+      "variance",
+      "gain"
+    ],
+    "rows": 60
+  },
+  {
+    "file": "fk_reference.csv",
+    "sha256": "22f0f77859fca9436b0c57c925be2e8bd6898ca6f82538c5088adff82bd008a2",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "q1_deg",
+      "q2_deg",
+      "x_m",
+      "y_m",
+      "x_cm",
+      "y_cm"
+    ],
+    "rows": 12
+  },
+  {
+    "file": "grid_reference.csv",
+    "sha256": "81990cdba63f2af94ee12c42c23df1cd6d50775972d5a93bddc525f7079ad59f",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "x",
+      "y",
+      "blocked"
+    ],
+    "rows": 96
+  },
+  {
+    "file": "ik_trace.csv",
+    "sha256": "0f08a166fa9f4ef96a71bfab5421675b34f57b6362bae2da6cc2ca21794f9b6a",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "iteration",
+      "q1_rad",
+      "q2_rad",
+      "x_m",
+      "y_m",
+      "error_m"
+    ],
+    "rows": 8
+  },
+  {
+    "file": "learning_reference.csv",
+    "sha256": "fa03694bfe43da8d12f5e71f531387611fea63fd88de13c43f16f4859092c5da",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "split",
+      "observation",
+      "action"
+    ],
+    "rows": 11
+  },
+  {
+    "file": "lever_reference.csv",
+    "sha256": "2e419ed0fd4b620d423828980837905fa7668e4ce09975c14966c2fcc8b5d639",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "mass_kg",
+      "arm_m",
+      "gravity_m_s2",
+      "torque_nm"
+    ],
+    "rows": 9
+  },
+  {
+    "file": "local_model_declarations.csv",
+    "sha256": "49e9bb24ab3be13b94f9cd7e6186fe500ec114723f9917a2411709f70e1af693",
+    "kind": "local_file_snapshot",
+    "columns": [
+      "model",
+      "joint",
+      "parent",
+      "child",
+      "lower_rad",
+      "upper_rad",
+      "declared_velocity_rad_s",
+      "declared_effort_nm",
+      "origin_xyz_m",
+      "axis"
+    ],
+    "rows": 24
+  },
+  {
+    "file": "local_model_sources.json",
+    "sha256": "9a4fd3c1b13a9eada9186d0c45462eeaa8e9aeab6738e330fcfdf5a726a1bb58",
+    "kind": "local_file_snapshot"
+  },
+  {
+    "file": "path_reference.csv",
+    "sha256": "d1e04bf770360ae113ef688d0c05614cef8276ec80083562eb4c7dc96bbd1364",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "step",
+      "x",
+      "y"
+    ],
+    "rows": 20
+  },
+  {
+    "file": "pid_reference.csv",
+    "sha256": "d8ab24b1bde876506265fdc16c185817ee3dfa5843050ab7096fd3ebf41bdde9",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "t_s",
+      "q_rad",
+      "v_rad_s",
+      "torque_nm"
+    ],
+    "rows": 1200
+  },
+  {
+    "file": "trajectory_reference.csv",
+    "sha256": "79923cd2baea08d3ffc93d6d09368e34c4232ee65a67044b4a673aad83e237a9",
+    "kind": "synthetic_teaching",
+    "columns": [
+      "t_s",
+      "q_rad",
+      "v_rad_s",
+      "a_rad_s2"
+    ],
+    "rows": 201
+  }
+]

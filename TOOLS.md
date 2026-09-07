@@ -1,5 +1,7 @@
 # 工具使用：先完成任务，再增加工具
 
+第一次接触终端或Python，先走 [从零操作卡](beginner/COMPUTER_FIRST_STEPS.md)。本页用于已经会打开文件和运行命令后的进一步操作。
+
 基础路线只安装Python和编辑器，Git用于版本练习。CAD可用已有软件。ROS、CUDA、仿真器和硬件抓包设备作为可选进阶项。自学工具数据见 [算法与通信实验](labs/ALGORITHMS.md)，无设备也能完成主线。
 
 ## 1. 本机环境：Windows 主线

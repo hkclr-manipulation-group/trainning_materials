@@ -1,0 +1,26 @@
+{
+  "snapshot_date": "2026-09-07",
+  "scope": "URDF declarations only; not verified hardware ratings",
+  "models": [
+    {
+      "model": "spark2_v2",
+      "source_relative": "collision_shpere_generation/models/spark2_v2/robot.urdf",
+      "sha256": "8d1746f41c001358d772933b833ef51fd49d334b46058881fd327a2ae5c3b413"
+    },
+    {
+      "model": "D20260901B",
+      "source_relative": "collision_shpere_generation/models/D20260901B/robot.urdf",
+      "sha256": "cfb8821aab3196f80c35d4bbdea04cda23c7410f385f795e07cabff2740e1f7b"
+    },
+    {
+      "model": "D20260902B60",
+      "source_relative": "collision_shpere_generation/models/D20260902B60/robot.urdf",
+      "sha256": "4ed88dc72f2c17ceaf7ae234ad533430235ebcc90136a30bcc385aa93924e2d8"
+    },
+    {
+      "model": "D20260903B10",
+      "source_relative": "collision_shpere_generation/models/D20260903B10/robot.urdf",
+      "sha256": "12e08e84171d5cf6663ecb68b4021474cd08005d318713671eebabed5575c0a4"
+    }
+  ]
+}

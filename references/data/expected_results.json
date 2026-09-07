@@ -1,0 +1,22 @@
+{
+  "fk_lengths_m": [
+    0.3,
+    0.2
+  ],
+  "ik_target_m": [
+    0.3,
+    0.2
+  ],
+  "ik_final_error_m": 7.471132682806966e-08,
+  "astar_cost": 19,
+  "trajectory_duration_s": 2.5,
+  "trajectory_vmax_rad_s": 0.5,
+  "trajectory_amax_rad_s2": 1.0,
+  "pid_dt_s": 0.005,
+  "pid_model": "unit inertia, viscous coefficient .3, torque clipped to +/-2",
+  "filter_model": "scalar random walk, Q=.01, R=.25; deterministic sinusoidal teaching noise",
+  "learning_heldout_mse": 2.9239073667507535e-05,
+  "learning_baseline_mse": 0.07853635638421146,
+  "randomness": "No random draws; explicit inputs and deterministic formulae",
+  "scope": "Synthetic teaching examples, not hardware measurements"
+}
