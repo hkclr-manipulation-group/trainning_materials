@@ -1,5 +1,30 @@
 # 自学资料验证记录
 
+## 2026-09-08：协议栈、IK家族、工具链与全课程深入
+
+新增4篇深入手册、3本Notebook和20道含解析的扩展题；七天正文、原手册、课程首页和工具说明已连接到新的专题入口。下方保留此前验证记录，测试数量按各次验证的实际范围记录。
+
+| 核验 | 本次结果 |
+|---|---|
+| 核心测试 | `python -m unittest discover -s tests -v`，43项通过；新增TCP任意切分、错误长度、CAN仲裁、IK分支平均、检索初值与延迟模型检查 |
+| 新增Notebook | 08、09、10各自在新内核中完整运行，分别5、6、4个代码块，共15个通过；本次未重复执行代码未变的原8本 |
+| Notebook总量 | 11本；00首页仅新增深入阅读导航，其余原课程代码未改 |
+| 可编辑实验 | PCAP逐层解析、TCP长度分帧、CAN ID仲裁、代数IK、近邻初值+DLS、局部近似、延迟及滤波对照均实际运行 |
+| 离线演示 | 9主题244帧SVG均可解析；本机Edge实测播放、暂停、前后单步、主题切换、进度跳转通过；全部244帧文字边界检查通过，无JavaScript异常 |
+| 视觉复核 | 查看协议栈、IK多解、Jacobian、A*和碰撞覆盖的浏览器截图，中文、数值与图形可读；4张静态SVG与播放器共用生成帧 |
+| 本地链接 | 52份Markdown和11本Notebook，492处本地链接全部存在；不代表所有外部站点或锚点都已验证 |
+| Python语法 | tools、labs、tests及Notebook源文件共30个Python文件通过AST解析 |
+
+本次Notebook结果保存在 `outputs/executed_notebooks/report_selected.json`，原8本的记录仍为同目录 `report.json`。演示器检查脚本为 `tools/check_concept_player.py`，报告和9张主题截图在 `outputs/concept_player_check/`；这些outputs产物是本机验证记录，不随课程源文件提交。
+
+复跑新增实验：`python tools/check_notebooks.py 08_protocol_stack.ipynb 09_ik_families.ipynb 10_visual_reasoning.ipynb`。重建演示和静态图：`python tools/build_concept_player.py`。浏览器检查额外需要Playwright和本机Edge，学员直接打开HTML无需安装它们。
+
+数据驱动IK使用425条教学样本和30个留出目标，实际实现为检索初值与DLS精修；IKFlow等神经网络方法只作论文导读。CAN演示限11位标准ID仲裁阶段；TCP实验为本地字节流解析，不接真实网络设备。碰撞图是二维矩形与近似圆，不表示已验证团队机器人网格或折叠姿态。
+
+GitHub/GitLab/Gitea、容器及CI内容是操作讲义和模板，本次未执行远端建库、PR、CI或部署；CI示例仍放在templates中。没有运行真机、GPU策略训练或论文完整复现。
+
+## 此前验证记录
+
 日期：2026-09-07，Windows / Python 3.10。
 
 交互课堂追加验证：2026-09-07至08。8本Notebook在各自新内核中执行，共43个代码块全部成功，无错误输出；结果保存在 `outputs/executed_notebooks/report.json` 和执行后的笔记副本中。第七天实际调用算法脚本并运行核心测试，35项通过。

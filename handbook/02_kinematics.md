@@ -1,5 +1,7 @@
 # 02｜运动学：从两根杆推到六轴机械臂
 
+完整方法比较见[逆运动学家族](11_inverse_kinematics_families.md)：几何、代数消元、解集与约束、Jacobian、优化和数据驱动。用[专题实验](../notebooks/09_ik_families.ipynb)观察两支正确解的平均为什么反而不正确。
+
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。
 
 分两次学习，共2–3小时加实验。先修：[数学基础](00_foundations.md)。目标是会算、会画、会解释失败。

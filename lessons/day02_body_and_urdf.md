@@ -1,5 +1,7 @@
 # 第二天｜用两根纸条做一只机械臂
 
+完成本日再深入：[任务约束、传动、精度、惯量与刚度](../handbook/13_systems_deepening.md)。把每个设计选择对应到一个可测量的量。
+
 **边读边做：** [本日可编辑Python实验](../notebooks/02_body_and_frames.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
 
 昨天学会了单位和坐标。今天只需要加上“杆可以绕一个点转动”这个概念，不需要先背机器人结构名称。

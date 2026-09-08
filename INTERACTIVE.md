@@ -1,6 +1,6 @@
 # 在浏览器里改 Python、运行实验、调用工具
 
-现在有8本可编辑的 Notebook：入门操作1本、七天实验7本。文字、公式、图像和程序放在同一页；按 Shift+Enter 运行代码块，修改参数后重新运行就会得到新的图和数值。
+现在有11本可编辑的 Notebook：入门操作1本、七天实验7本、深入专题3本。文字、公式、图像和程序放在同一页；按 Shift+Enter 运行代码块，修改参数后重新运行就会得到新的图和数值。
 
 本次提供的是**本机 JupyterLab 课堂**：浏览器显示页面，本机 Python 执行计算。没有发布公共网址。它支持本地文件、Python包和命令行工具，适合接着使用我们的项目。Notebook 将讲解和可运行代码组合在一个文件中，参见 [JupyterLab 官方说明](https://jupyterlab.readthedocs.io/en/stable/user/notebook.html)。
 
@@ -79,7 +79,7 @@ JupyterLab 终端也运行在服务所在机器，权限等同启动它的账户
 
 | 方式 | Python在哪运行 | 文件和外部工具 | 本次状态 |
 |---|---|---|---|
-| 本机JupyterLab | 启动服务的电脑 | 本机Python包、文件、命令行工具 | 已提供启动器与8本教材 |
+| 本机JupyterLab | 启动服务的电脑 | 本机Python包、文件、命令行工具 | 已提供启动器与11本教材 |
 | 远程JupyterLab/JupyterHub | 服务器 | 服务器上的环境；多人需独立账户/内核 | 未部署，需要确定服务器和访问方式 |
 | JupyterLite | 浏览器WebAssembly | 包和系统调用受限，不适合直接接本机工具 | 方案说明，未制作站点 |
 
@@ -100,3 +100,17 @@ JupyterLite 的运行方式与包限制见[官方说明](https://jupyterlite.rea
 维护者可运行 `python tools/build_notebooks.py`，将 `notebooks/source/*.py` 的分块讲义重新生成 `.ipynb`；**这会覆盖同名教材笔记，所以学员另存自己的副本**。构建器不在课堂启动时自动运行。
 
 安装交互依赖后，执行 `.venv` 的 `python tools/check_notebooks.py` 会在每本独立的新内核中完整执行，输出保存到 `outputs/executed_notebooks/`，教材原文件不被覆盖。验证方法参见 [nbclient](https://nbclient.readthedocs.io/en/latest/client.html)，交互控件参见 [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/examples/Using%20Interact.html)。
+
+## 7. 新增深入实验与逐步演示
+
+这3本专题可接在对应日课程后，也可作为第二周内容。仍用同一个Training Python内核，修改代码后按Shift+Enter。
+
+| 专题 | 可修改和运行的内容 | 先阅读 |
+|---|---|---|
+| [08 协议栈](notebooks/08_protocol_stack.ipynb) | 拆解PCAP的50字节、TCP长度分帧、错误长度、CAN逐位仲裁 | [通信历史与协议栈](handbook/10_communication_stack_history.md) |
+| [09 IK方法](notebooks/09_ik_families.ipynb) | 代数消元、两解平均反例、425点数据表检索初值、30目标迭代比较 | [逆运动学方法家族](handbook/11_inverse_kinematics_families.md) |
+| [10 视觉推理](notebooks/10_visual_reasoning.ipynb) | 改步长比较Jacobian与真实FK；改反馈延迟；比较滤波平滑与滞后 | [系统深入](handbook/13_systems_deepening.md) |
+
+[9主题逐步演示器](assets/interactive/concept_player.html)是另一个入口：直接双击HTML即可，可暂停、单步、拖进度。每步给出观察对象、数值、解释和适用范围。它播放Python预计算结果；要改变算法与参数，使用上面的Notebook。详细主题及旧GIF的改进说明见[演示指南](assets/interactive/README.md)。
+
+GitHub等工具的协作练习见[工具链](handbook/12_developer_toolchain.md)，并附[Issue](templates/ISSUE_EXERCISE.md)、[PR](templates/PULL_REQUEST_EXERCISE.md)与[CI示例](templates/course_checks.yml)。CI文件放在templates中供学习，尚未启用远程工作流。

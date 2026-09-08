@@ -1,8 +1,15 @@
 # 04｜碰撞与规划：从找路到可执行轨迹
 
+接着读[图搜索、采样、优化及边检查](13_systems_deepening.md)。[逐步演示器](../assets/interactive/concept_player.html)可查看A*每次扩展的g/h/f，以及碰撞近似过大误报、过小覆盖不足的区别。
+
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。
 
 必读约90分钟，A*实验45分钟。目标：知道算法搜索什么空间、检查什么约束，以及失败意味着什么。
+
+
+![半径9mm的近似圆仍覆盖矩形且互不重叠](../assets/interactive/collision_coverage.svg)
+
+这是二维教学几何。用[碰撞近似主题](../assets/interactive/concept_player.html)逐步比较15、12、9、5mm半径，区分误报与覆盖不足；真实机器人仍需检查网格、姿态和碰撞对。
 
 ## 1. 工作空间和构型空间
 

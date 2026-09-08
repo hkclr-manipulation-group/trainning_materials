@@ -1,10 +1,12 @@
 # 从纸条机械臂开始：机器人开发自学
 
+**新增深入路线：** [全课程深度地图](DEPTH_MAP.md)覆盖通信历史与协议栈、各类逆运动学、控制、感知、AI和工具链；[9主题逐步演示](assets/interactive/concept_player.html)可直接离线打开，配有观察提示、数值和解释；[20道扩展题与解析](assessments/EXTENDED_QUESTIONS.md)用于自检。
+
 这套资料按中学生可起步的顺序编写：先用生活例子、纸笔和动画理解问题，再学几个数字怎样计算，最后运行代码。不会矩阵、微积分或编程也可以从第一天开始。需要深入时，再进入技术手册和新增的工程细节。
 
 **第一周目标：看懂机器人各部分如何配合，完成一个自己能解释的小工具。** 每天的末尾都有自检和答案，遇到具体问题可以请教同事，无需讲师。
 
-**现在可以边读边改Python并运行：** 打开[交互课堂说明](INTERACTIVE.md)，安装一次后双击 `start_classroom.cmd`。8本Notebook包含代码编辑、关节/控制/滤波滑块、实际训练过程播放和工具调用。浏览器显示教材，本机Python负责计算；尚未部署公共网址。
+**现在可以边读边改Python并运行：** 打开[交互课堂说明](INTERACTIVE.md)，安装一次后双击 `start_classroom.cmd`。11本Notebook包含代码编辑、关节/控制/滤波滑块、实际训练过程播放和工具调用。浏览器显示教材，本机Python负责计算；尚未部署公共网址。
 
 ## 先走这条线
 
@@ -17,7 +19,7 @@
 
 | 材料 | 入口 |
 |---|---|
-| 可编辑运行的8本Python交互教材 | [安装与使用](INTERACTIVE.md)、[课堂首页](notebooks/00_start_here.ipynb) |
+| 可编辑运行的11本Python交互教材 | [安装与使用](INTERACTIVE.md)、[课堂首页](notebooks/00_start_here.ipynb) |
 | 从通俗解释接到工程实现：推导、参数、接口与失败原因 | [工程细节](handbook/09_engineering_details.md) |
 | 重写后的七天正文：生活例子→分步计算→代码→自检 | [第一天](lessons/day01_system_and_code.md) |
 | 12段离线动画、12张四步分镜 | [动画索引](assets/animations/README.md) |
@@ -26,7 +28,7 @@
 | 从通俗比喻过渡到算法 | [算法故事](beginner/ALGORITHM_STORIES.md) |
 | 9类教学数值表与可核对的预期结果 | [参考数据说明](references/DATA_GUIDE.md) |
 | 4套团队模型、24个关节的文件声明快照 | [来源与范围](references/DATA_GUIDE.md) |
-| 10条分级阅读卡、8条BibTeX与外部数据集卡 | [文献阅读路线](references/READING_GUIDE.md) |
+| 分级阅读卡、BibTeX与外部数据集卡 | [文献阅读路线](references/READING_GUIDE.md) |
 | 深入原理、推导与方法比较 | [技术手册及算法地图](handbook/ALGORITHMS.md) |
 | 基础与算法实验、离线通信数据 | [基础实验](labs/README.md)、[算法实验](labs/ALGORITHMS.md) |
 | 自检与结业 | 每篇正文3题含答案；[原题库](assessments/QUESTIONS.md)、[算法题](assessments/ALGORITHM_EXERCISES.md)作为进阶 |

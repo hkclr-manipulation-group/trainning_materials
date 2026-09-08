@@ -1,5 +1,7 @@
 # 第四天｜先算到哪里，再学怎样到那里
 
+完成本日再深入：[IK方法家族](../handbook/11_inverse_kinematics_families.md)与[采样/延迟/控制](../handbook/13_systems_deepening.md)。用[09方法比较](../notebooks/09_ik_families.ipynb)、[10延迟实验](../notebooks/10_visual_reasoning.ipynb)验证想法。
+
 **边读边做：** [本日可编辑Python实验](../notebooks/04_kinematics_control.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
 
 你已经知道坐标、两根杆和消息。今天分三小段：给定角度算位置；给定位置找角度；运动中根据反馈纠正。三件事相关，但不是同一个问题。

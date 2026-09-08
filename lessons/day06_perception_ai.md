@@ -1,5 +1,7 @@
 # 第六天｜让机器人看见，再学着做
 
+完成本日再深入：[误差传播、估计、AI表示与闭环评价](../handbook/13_systems_deepening.md)。[IK两解平均实验](../notebooks/09_ik_families.ipynb)提供“平均预测为何失败”的具体反例。
+
 **边读边做：** [本日可编辑Python实验](../notebooks/06_perception_learning.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
 
 你已经知道位置需要参考系，动作需要反馈。今天把相机和学习接进来，仍然从可手算的小问题开始。

@@ -1,0 +1,42 @@
+{
+  "generator": "tools/build_concept_player.py",
+  "scenes": [
+    {
+      "name": "协议栈",
+      "frames": 8
+    },
+    {
+      "name": "CAN逐位仲裁",
+      "frames": 11
+    },
+    {
+      "name": "IK两解与平均",
+      "frames": 4
+    },
+    {
+      "name": "Jacobian局部近似",
+      "frames": 31
+    },
+    {
+      "name": "IK迭代与停滞",
+      "frames": 11
+    },
+    {
+      "name": "A*逐步搜索",
+      "frames": 65
+    },
+    {
+      "name": "反馈延迟对照",
+      "frames": 50
+    },
+    {
+      "name": "滤波与滞后",
+      "frames": 60
+    },
+    {
+      "name": "碰撞近似覆盖",
+      "frames": 4
+    }
+  ],
+  "scope": "Python-precomputed teaching SVG frames; not live hardware or a general simulator"
+}

@@ -1,0 +1,19 @@
+# Teaching template: inactive here. Copy into .github/workflows in your own repo.
+name: Course checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+      - name: Test offline algorithms
+        run: python -m unittest discover -s tests -v
+      - name: Check local learning links
+        run: python tools/check_learning_links.py

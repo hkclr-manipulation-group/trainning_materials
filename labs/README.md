@@ -1,5 +1,7 @@
 # 六个离线实验
 
+新增可运行专题见[协议栈](../notebooks/08_protocol_stack.ipynb)、[IK方法比较](../notebooks/09_ik_families.ipynb)、[视觉推理](../notebooks/10_visual_reasoning.ipynb)。辅助算法位于[expanded_lab.py](expanded_lab.py)，基础算法检查仍使用统一unittest命令。
+
 也可以在浏览器中直接修改并运行Python：[交互课堂](../INTERACTIVE.md)提供8本Notebook、参数滑块、训练过程播放与本地工具调用；下列命令行实验仍可独立使用。
 
 基础实验之外，继续做 [五个算法实验、原生交互窗口与离线通信数据练习](ALGORITHMS.md)。图解见 [图示索引](../assets/README.md)。

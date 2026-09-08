@@ -69,3 +69,15 @@ assert (ROOT / "labs" / "data" / "two_link.urdf").is_file()
 assert abs(math.radians(180) - math.pi) < 1e-12
 display(Image(filename=str(ROOT / "assets" / "animations" / "fk_steps.png")))
 print("准备完成。打开第一天实验。")
+
+# %% [markdown]
+# ## 完成基础后，继续深入
+#
+# 从[自学深度地图](../DEPTH_MAP.md)按问题选专题，不要求第一周全部完成。
+#
+# - [08 协议栈、分帧与仲裁](08_protocol_stack.ipynb)：一条消息怎样逐层封装，为什么一次接收可能只有半条消息？
+# - [09 逆运动学方法比较](09_ik_families.ipynb)：几何、代数、解集、Jacobian和数据驱动分别解决什么问题？
+# - [10 动画背后的计算](10_visual_reasoning.ipynb)：修改局部步长、反馈延迟、滤波参数，观察实际重算结果。
+# - [开发工具链](../handbook/12_developer_toolchain.md)：从Git与GitHub到CI、环境、调试和数据版本。
+#
+# 先看图建立直觉时，打开[逐步演示指南](../assets/interactive/README.md)，用浏览器直接打开其中的HTML；9个主题都支持暂停、单步和拖动进度。每步的解释与数值对应，改代码则回到Notebook。

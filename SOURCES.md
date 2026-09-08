@@ -53,3 +53,17 @@ Modern Robotics、OMPL、MIT、OpenCV和Open3D的页面正文已读取；ACT、D
 | [JupyterLite限制](https://jupyterlite.readthedocs.io/en/stable/troubleshooting.html) | 解释纯浏览器Python与完整本机Python的差异 |
 
 上述页面已读取。新增Notebook代码、讲解与图表为课程自建；这些来源用于核对平台行为，不是机器人硬件指标。更多工程技术说明见[工程细节](handbook/09_engineering_details.md)。
+
+## 协议栈、历史、IK与工具链扩展（2026-09-08核查）
+
+| 来源 | 本教材用来说明什么 | 阅读入口 |
+|---|---|---|
+| Metcalfe本人计算机历史博物馆口述史 | 1973年Ethernet命名与研发背景 | [原始口述记录PDF](https://archive.computerhistory.org/resources/text/Oral_History/Metcalfe_Robert_1/Metcalfe_Robert_1_2.oral_history.2006.7.102657995.pdf) |
+| IETF RFC 768 / 1122 / 9293 | UDP头、Internet分层、TCP字节流；区分1980、1989和2022文档 | [RFC768](https://www.rfc-editor.org/rfc/rfc768)、[RFC1122](https://www.rfc-editor.org/rfc/rfc1122.html)、[RFC9293](https://www.rfc-editor.org/rfc/rfc9293) |
+| CAN in Automation / Bosch | 1986公开介绍与1991量产应用是不同历史节点 | [CiA历史](https://www.can-cia.org/can-knowledge/history-of-can-technology)、[Bosch电子史](https://www.bosch.com/stories/history-of-electronics/) |
+| IKFlow原作者论文 | 用条件生成模型表示多样IK候选的研究路线 | [论文](https://arxiv.org/abs/2111.08933) |
+| Pro Git | 2005年Git起源及版本控制背景 | [Git历史](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git) |
+| GitHub / GitLab / Gitea官方文档 | 仓库、分支、PR/MR、CI与远程开发的工具角色 | [GitHub入门](https://docs.github.com/en/get-started/using-github/hello-world)、[Actions](https://docs.github.com/en/actions/get-started/understand-github-actions)、[GitLab MR](https://docs.gitlab.com/user/project/merge_requests/)、[Gitea PR](https://docs.gitea.com/usage/issues-prs/pull-request/) |
+| Docker / DVC / MLflow / Ruff官方文档 | 运行环境、数据版本、实验记录与静态检查各自职责 | [Docker](https://docs.docker.com/get-started/docker-overview/)、[DVC](https://doc.dvc.org/start)、[MLflow](https://mlflow.org/docs/latest/ml/tracking/)、[Ruff](https://docs.astral.sh/ruff/) |
+
+教材中的425点IK数据表、30个留出目标、延迟曲线、滤波扰动和碰撞矩形均为本仓库生成的教学例子；不是论文实验数据或团队真机测量。IKFlow仅作原文导读；本课实际运行的是数据表检索初值与DLS精修。历史节点不等于协议所有版本的发布时间。

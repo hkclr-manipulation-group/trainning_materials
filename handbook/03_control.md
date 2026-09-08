@@ -1,5 +1,7 @@
 # 03｜动力学、轨迹与控制算法
 
+接着读[采样、延迟、串级、前馈与LQR/MPC](13_systems_deepening.md)，并在[可编辑实验](../notebooks/10_visual_reasoning.ipynb)中比较同一控制器在不同反馈延迟下的结果。
+
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。
 
 必读1–4节约90分钟，5–6节进阶。先修FK、速度和误差。目标：分清模型、参考轨迹、反馈控制和执行约束。

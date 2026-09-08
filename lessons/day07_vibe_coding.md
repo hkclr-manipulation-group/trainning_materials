@@ -1,5 +1,7 @@
 # 第七天｜做一个自己能解释的小工具
 
+完成本日再深入：[Git/GitHub等开发工具链](../handbook/12_developer_toolchain.md)。按Issue、分支、修改、测试、PR和复现记录走一遍；AI生成的修改也需要同样的检查。
+
 **边读边做：** [本日可编辑Python实验](../notebooks/07_tools_and_delivery.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
 
 前六天走过了本体、消息、运动、避障与学习。今天不增加大量新算法，而是把“输入→计算→检查→输出”做完整。

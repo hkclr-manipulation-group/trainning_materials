@@ -1,5 +1,7 @@
 # 09｜从看懂故事到读懂工程实现
 
+进一步按主题读：[通信协议栈](10_communication_stack_history.md)、[IK方法家族](11_inverse_kinematics_families.md)、[开发工具链](12_developer_toolchain.md)、[全系统深入](13_systems_deepening.md)。先按[深度地图](../DEPTH_MAP.md)选择问题，再进入推导。
+
 本章把七天主线中的技术台阶补齐。第一次先看每节的“问题”和数字例子，再做对应 Notebook；公式用于解释代码为什么这样写。完成这些仍是开发入门，不等于一周掌握完整机器人系统。
 
 ## 1. 软件里的一个位置，为什么不只是三个数

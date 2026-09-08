@@ -1,5 +1,7 @@
 # 第一天｜先让机器人听懂一句话
 
+完成本日再深入：[数学与软件接口](../handbook/13_systems_deepening.md)。先掌握单位和函数；矩阵、差分与概率可沿[深度地图](../DEPTH_MAP.md)逐步补。
+
 **边读边做：** [本日可编辑Python实验](../notebooks/01_units_and_code.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
 
 今天不要求会编程，也不要求会三角函数。准备两张纸、一支笔和计算器。有电脑就跟着运行，没有电脑先把纸笔部分做完。

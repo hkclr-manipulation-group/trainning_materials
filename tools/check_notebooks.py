@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import time
+import argparse
 
 import nbformat
 from nbclient import NotebookClient
@@ -12,11 +13,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("names", nargs="*", help="Optional notebook filenames; otherwise check all")
+    args = parser.parse_args()
     os.environ.update(environment())
     output = ROOT / "outputs" / "executed_notebooks"
     output.mkdir(parents=True, exist_ok=True)
     results = []
-    for path in sorted((ROOT / "notebooks").glob("*.ipynb")):
+    paths = sorted((ROOT / "notebooks").glob("*.ipynb"))
+    if args.names:
+        known = {p.name: p for p in paths}
+        unknown = set(args.names) - known.keys()
+        if unknown:
+            parser.error("unknown notebooks: " + ", ".join(sorted(unknown)))
+        paths = [known[name] for name in args.names]
+    for path in paths:
         nb = nbformat.read(path, as_version=4)
         nbformat.validate(nb)
         start = time.monotonic()
@@ -28,7 +39,8 @@ def main():
         results.append({"notebook": path.name, "code_cells": count,
                         "seconds": round(time.monotonic() - start, 2), "status": "passed"})
         print(path.name, count, "code cells passed", flush=True)
-    (output / "report.json").write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
+    report_name = "report_selected.json" if args.names else "report.json"
+    (output / report_name).write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

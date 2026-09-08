@@ -1,5 +1,7 @@
 # 第三天｜给机器人寄一封不会看错的信
 
+完成本日再深入：[通信历史与协议栈](../handbook/10_communication_stack_history.md)，并运行[08协议实验](../notebooks/08_protocol_stack.ipynb)。从一条指令追到每层字节，再区分传到、解析和执行。
+
 **边读边做：** [本日可编辑Python实验](../notebooks/03_communication.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
 
 昨天做好了两连杆模型。今天先不研究电机怎样转，只研究指令怎样到达设备、反馈怎样回来。
