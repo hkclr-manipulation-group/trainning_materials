@@ -1,6 +1,6 @@
 # 在浏览器里改 Python、运行实验、调用工具
 
-现在有11本可编辑的 Notebook：入门操作1本、七天实验7本、深入专题3本。文字、公式、图像和程序放在同一页；按 Shift+Enter 运行代码块，修改参数后重新运行就会得到新的图和数值。
+现在有13本可编辑的 Notebook：入门操作1本、七天实验7本、深入专题5本。文字、公式、图像和程序放在同一页；按 Shift+Enter 运行代码块，修改参数后重新运行就会得到新的图和数值。
 
 本次提供的是**本机 JupyterLab 课堂**：浏览器显示页面，本机 Python 执行计算。没有发布公共网址。它支持本地文件、Python包和命令行工具，适合接着使用我们的项目。Notebook 将讲解和可运行代码组合在一个文件中，参见 [JupyterLab 官方说明](https://jupyterlab.readthedocs.io/en/stable/user/notebook.html)。
 
@@ -79,7 +79,7 @@ JupyterLab 终端也运行在服务所在机器，权限等同启动它的账户
 
 | 方式 | Python在哪运行 | 文件和外部工具 | 本次状态 |
 |---|---|---|---|
-| 本机JupyterLab | 启动服务的电脑 | 本机Python包、文件、命令行工具 | 已提供启动器与11本教材 |
+| 本机JupyterLab | 启动服务的电脑 | 本机Python包、文件、命令行工具 | 已提供启动器与13本教材 |
 | 远程JupyterLab/JupyterHub | 服务器 | 服务器上的环境；多人需独立账户/内核 | 未部署，需要确定服务器和访问方式 |
 | JupyterLite | 浏览器WebAssembly | 包和系统调用受限，不适合直接接本机工具 | 方案说明，未制作站点 |
 
@@ -111,6 +111,15 @@ JupyterLite 的运行方式与包限制见[官方说明](https://jupyterlite.rea
 | [09 IK方法](notebooks/09_ik_families.ipynb) | 代数消元、两解平均反例、425点数据表检索初值、30目标迭代比较 | [逆运动学方法家族](handbook/11_inverse_kinematics_families.md) |
 | [10 视觉推理](notebooks/10_visual_reasoning.ipynb) | 改步长比较Jacobian与真实FK；改反馈延迟；比较滤波平滑与滞后 | [系统深入](handbook/13_systems_deepening.md) |
 
-[9主题逐步演示器](assets/interactive/concept_player.html)是另一个入口：直接双击HTML即可，可暂停、单步、拖进度。每步给出观察对象、数值、解释和适用范围。它播放Python预计算结果；要改变算法与参数，使用上面的Notebook。详细主题及旧GIF的改进说明见[演示指南](assets/interactive/README.md)。
+[16主题逐步演示器](assets/interactive/concept_player.html)是另一个入口：直接双击HTML即可，可暂停、单步、拖进度。每步给出观察对象、数值、解释和适用范围。它播放Python预计算结果；要改变算法与参数，使用上面的Notebook。详细主题及旧GIF的改进说明见[演示指南](assets/interactive/README.md)。
 
 GitHub等工具的协作练习见[工具链](handbook/12_developer_toolchain.md)，并附[Issue](templates/ISSUE_EXERCISE.md)、[PR](templates/PULL_REQUEST_EXERCISE.md)与[CI示例](templates/course_checks.yml)。CI文件放在templates中供学习，尚未启用远程工作流。
+
+## 新增基础衔接实验
+
+| Notebook | 配套讲义 | 学习结果 |
+|---|---|---|
+| [11 坐标、矩阵与FK](notebooks/11_frames_matrices_fk.ipynb) | [第15章](handbook/15_frames_matrices_fk.md) | 逐格计算、点/方向、逆变换、顺序对照、固定点换坐标与FK |
+| [12 物理链路](notebooks/12_physical_links.ipynb) | [第14章](handbook/14_physical_connections.md) | UART采样、SPI移位时间、终端并联、差分/共模和I²C上升沿 |
+
+基础不足时先按[前置路线](handbook/16_prerequisites_and_deeper_topics.md)补课；试用AI在线答疑的具体素材和范围见[OpenMAIC方案](OPENMAIC.md)。这两本仍用本机Training Python内核，未连接真机。

@@ -1,5 +1,7 @@
 # 08｜通信自学：字节、时序与故障
 
+物理接线、电平、链路时序和项目桥接链先看[第14章](14_physical_connections.md)，再把本章的应用报文放回完整链路中理解。
+
 从字段继续向上下层展开：[通信历史与协议栈](10_communication_stack_history.md)讲分层、封装、TCP分帧、CAN仲裁与实时性；[可编辑实验](../notebooks/08_protocol_stack.ipynb)逐字节检查结果。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。

@@ -36,6 +36,34 @@
     {
       "name": "碰撞近似覆盖",
       "frames": 4
+    },
+    {
+      "name": "矩阵逐格相乘",
+      "frames": 4
+    },
+    {
+      "name": "同一点不同坐标",
+      "frames": 19
+    },
+    {
+      "name": "左右乘与顺序",
+      "frames": 19
+    },
+    {
+      "name": "FK逐节变换",
+      "frames": 4
+    },
+    {
+      "name": "UART接线与采样",
+      "frames": 10
+    },
+    {
+      "name": "CAN双线与终端",
+      "frames": 8
+    },
+    {
+      "name": "SPI四线分工",
+      "frames": 8
     }
   ],
   "scope": "Python-precomputed teaching SVG frames; not live hardware or a general simulator"

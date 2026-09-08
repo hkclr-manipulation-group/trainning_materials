@@ -80,4 +80,11 @@ print("准备完成。打开第一天实验。")
 # - [10 动画背后的计算](10_visual_reasoning.ipynb)：修改局部步长、反馈延迟、滤波参数，观察实际重算结果。
 # - [开发工具链](../handbook/12_developer_toolchain.md)：从Git与GitHub到CI、环境、调试和数据版本。
 #
-# 先看图建立直觉时，打开[逐步演示指南](../assets/interactive/README.md)，用浏览器直接打开其中的HTML；9个主题都支持暂停、单步和拖动进度。每步的解释与数值对应，改代码则回到Notebook。
+# 先看图建立直觉时，打开[逐步演示指南](../assets/interactive/README.md)，用浏览器直接打开其中的HTML；16个主题都支持暂停、单步和拖动进度。每步的解释与数值对应，改代码则回到Notebook。
+
+# %% [markdown]
+# ## 基础知识仍有跳跃时，从这两本补起
+# - [11 坐标、矩阵与FK](11_frames_matrices_fk.ipynb)：先看同一个点，再做行乘列，最后逐节连接机械臂。
+# - [12 物理链路](12_physical_links.ipynb)：从TX/RX、时钟和差分线回到报文与控制。
+# - [前置知识与参考资料](../handbook/16_prerequisites_and_deeper_topics.md)：每个主题说明缺哪一块、先看哪里。
+# - [OpenMAIC答疑试讲材料](../OPENMAIC.md)：AI讲解与Jupyter实际执行的分工。

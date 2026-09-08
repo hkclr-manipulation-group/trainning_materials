@@ -1,5 +1,7 @@
 # 03｜动力学、轨迹与控制算法
 
+读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
+
 接着读[采样、延迟、串级、前馈与LQR/MPC](13_systems_deepening.md)，并在[可编辑实验](../notebooks/10_visual_reasoning.ipynb)中比较同一控制器在不同反馈延迟下的结果。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。

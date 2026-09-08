@@ -1,5 +1,7 @@
 # 11｜逆运动学全景：几何、代数、集合、Jacobian与数据驱动
 
+读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
+
 先读[两连杆FK与基础IK](02_kinematics.md)，再做[方法对照实验](../notebooks/09_ik_families.ipynb)。这一章既讲几何法，也讲解集与约束；它们不是同一个概念。
 
 

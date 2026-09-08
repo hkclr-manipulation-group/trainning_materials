@@ -247,6 +247,8 @@ def main():
     scenes=[("协议栈",stack_frames()),("CAN逐位仲裁",can_frames()),("IK两解与平均",branch_frames()),
             ("Jacobian局部近似",jacobian_frames()),("IK迭代与停滞",ik_frames()),("A*逐步搜索",astar_frames()),
             ("反馈延迟对照",feedback_frames()),("滤波与滞后",filter_frames()),("碰撞近似覆盖",collision_frames())]
+    from foundation_scenes import extra_scenes
+    scenes.extend(extra_scenes())
     data=[{"name":name,"frames":frames} for name,frames in scenes]
     page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>机器人概念逐步演示</title><style>
@@ -275,6 +277,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});st
     (out/'concept_player.html').write_text(page,encoding='utf-8')
     previews = {'protocol_stack.svg': (0, 3), 'ik_branches.svg': (2, -1),
                 'jacobian.svg': (3, -1), 'collision_coverage.svg': (8, 2)}
+    previews.update({'matrix_product.svg': (9,-1), 'frame_coordinates.svg': (10,-1), 'transform_order.svg': (11,-1), 'fk_chain.svg': (12,-1), 'uart_sampling.svg': (13,5), 'can_physical.svg': (14,2), 'spi_wiring.svg': (15,3)})
     for filename, (scene_index, frame_index) in previews.items():
         (out/filename).write_text(data[scene_index]['frames'][frame_index], encoding='utf-8')
     manifest={"generator":"tools/build_concept_player.py","scenes":[{"name":name,"frames":len(frames)} for name,frames in scenes],

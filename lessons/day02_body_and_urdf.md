@@ -1,5 +1,7 @@
 # 第二天｜用两根纸条做一只机械臂
 
+坐标和矩阵尚不熟悉时，先做[第15章的方格纸与矩阵小例子](../handbook/15_frames_matrices_fk.md)，再看URDF。
+
 完成本日再深入：[任务约束、传动、精度、惯量与刚度](../handbook/13_systems_deepening.md)。把每个设计选择对应到一个可测量的量。
 
 **边读边做：** [本日可编辑Python实验](../notebooks/02_body_and_frames.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。

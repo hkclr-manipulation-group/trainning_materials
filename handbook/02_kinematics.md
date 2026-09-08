@@ -1,5 +1,7 @@
 # 02｜运动学：从两根杆推到六轴机械臂
 
+需要把矩阵和变换顺序从头讲清时，先读[坐标、矩阵与FK](15_frames_matrices_fk.md)，再进入本章和IK专题。
+
 完整方法比较见[逆运动学家族](11_inverse_kinematics_families.md)：几何、代数消元、解集与约束、Jacobian、优化和数据驱动。用[专题实验](../notebooks/09_ik_families.ipynb)观察两支正确解的平均为什么反而不正确。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。

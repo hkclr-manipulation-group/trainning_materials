@@ -1,5 +1,7 @@
 # 07｜软件与AI协作：从能跑到可维护
 
+读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
+
 完整协作与环境流程见[开发工具链](12_developer_toolchain.md)；接口、状态、并发、测试层次与AI协作的进一步解释见[系统深入](13_systems_deepening.md)。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。

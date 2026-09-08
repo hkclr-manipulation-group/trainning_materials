@@ -1,5 +1,7 @@
 # 05｜感知、标定与状态估计
 
+读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
+
 接着读[误差传播、RANSAC、ICP/PnP与可观测性](13_systems_deepening.md)；[视觉推理实验](../notebooks/10_visual_reasoning.ipynb)用同一测量比较平滑与滞后。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。

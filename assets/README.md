@@ -1,6 +1,6 @@
 # 图示索引与使用方法
 
-新增[9主题逐步演示](interactive/concept_player.html)与[使用指南](interactive/README.md)：协议栈、CAN、IK、Jacobian、搜索、反馈、滤波及碰撞覆盖。每一步附观察提示和适用范围，可离线打开。
+新增[16主题逐步演示](interactive/concept_player.html)与[使用指南](interactive/README.md)：协议栈、CAN、IK、Jacobian、搜索、反馈、滤波及碰撞覆盖。每一步附观察提示和适用范围，可离线打开。
 
 零基础先看新增 [12段动画与12张四步分镜](animations/README.md)，再看本页较技术化的14组静态图。动画支持原生Python窗口暂停、逐帧与慢放。
 

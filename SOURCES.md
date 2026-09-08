@@ -67,3 +67,9 @@ Modern Robotics、OMPL、MIT、OpenCV和Open3D的页面正文已读取；ACT、D
 | Docker / DVC / MLflow / Ruff官方文档 | 运行环境、数据版本、实验记录与静态检查各自职责 | [Docker](https://docs.docker.com/get-started/docker-overview/)、[DVC](https://doc.dvc.org/start)、[MLflow](https://mlflow.org/docs/latest/ml/tracking/)、[Ruff](https://docs.astral.sh/ruff/) |
 
 教材中的425点IK数据表、30个留出目标、延迟曲线、滤波扰动和碰撞矩形均为本仓库生成的教学例子；不是论文实验数据或团队真机测量。IKFlow仅作原文导读；本课实际运行的是数据表检索初值与DLS精修。历史节点不等于协议所有版本的发布时间。
+
+## 前置知识、物理连接与交互答疑资料
+
+新增讲义的来源按用途列在第14至16章末尾：NXP I²C原始规范、TI RS-485设计指南、CAN in Automation、USB-IF、EtherCAT官方资料；矩阵与FK以MIT 18.06、Modern Robotics及URDF定义为参考。所有数值小例子由本课程自行推导和代码检查，不是外部设备的测试结果。
+
+团队链路例子来自工作区 `f446_spi_can_board/README.md`，记录SPI固定快照、CAN1/2和MCU引脚的描述；本课没有据此推测接插件针脚。OpenMAIC参考用户指定仓库的main README，读取哈希和未验证范围见[核查记录](integrations/openmaic/source_review.json)与[适配说明](OPENMAIC.md)。

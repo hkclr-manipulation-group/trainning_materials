@@ -1,4 +1,4 @@
-# 让动画解释原因：九个离线逐步主题
+# 让动画解释原因：16个离线逐步主题
 
 在文件夹中双击 [concept_player.html](concept_player.html)，用浏览器打开。无需联网、安装新包或启动Jupyter。若编辑器只显示源码，请使用文件管理器的“打开方式→浏览器”。
 
@@ -48,3 +48,17 @@
 正文可直接展示[协议栈](protocol_stack.svg)、[IK分支](ik_branches.svg)、[Jacobian局部近似](jacobian.svg)和[碰撞覆盖](collision_coverage.svg)。它们与播放器共用Python生成的帧，更新生成器后一起重建。
 
 维护者如已安装Playwright且本机有Edge，可运行 `python tools/check_concept_player.py` 检查播放、暂停、前后单步、主题切换、进度跳转，以及所有帧的文字是否越界；报告和截图保存在 `outputs/concept_player_check/`。这不是学员使用演示器的依赖。
+
+## 从前置知识接到算法的新主题
+
+| 主题 | 先观察什么 | 配套静态图 |
+|---|---|---|
+| 矩阵逐格相乘 | A的行、B的列如何生成C的一个格子 | [矩阵](matrix_product.svg) |
+| 同一点不同坐标 | 黑点固定，B轴转动，局部坐标改变 | [坐标](frame_coordinates.svg) |
+| 左右乘与顺序 | 同样转角和平移得到不同终点 | [变换顺序](transform_order.svg) |
+| FK逐节变换 | 每节沿自己的局部轴延伸 | [FK](fk_chain.svg) |
+| UART接线与采样 | TX到RX的线与位中间的采样位置 | [UART](uart_sampling.svg) |
+| CAN双线与终端 | 差分电压、共同扰动和两端终端 | [CAN](can_physical.svg) |
+| SPI四线分工 | 时钟、两个数据方向和片选 | [SPI](spi_wiring.svg) |
+
+新增主题为Python生成的确定性教学图，不是电路仿真。讲义讲清接头、引脚、电气、链路、消息与应用各层后，再进入具体设备资料。

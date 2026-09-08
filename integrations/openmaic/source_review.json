@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/THU-MAIC/OpenMAIC",
+  "read_url": "https://raw.githubusercontent.com/THU-MAIC/OpenMAIC/main/README.md",
+  "readme_sha256": "5c281dc872e6b834f6501abc2b507af377faa643d92cda7f2f4072ace629e17f",
+  "review_scope": "main README only; no runtime, auth, live multi-user or code-execution integration validation",
+  "declared_requirements": {
+    "node": ">=22.19",
+    "pnpm": ">=10"
+  },
+  "platform_started": false,
+  "external_uploads": false,
+  "model_calls": false
+}

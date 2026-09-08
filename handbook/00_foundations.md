@@ -1,5 +1,7 @@
 # 00｜数学与代码：把符号变成可以算的东西
 
+矩阵乘法的逐格算例、基向量、齐次坐标、逆变换与左/右乘见[第15章](15_frames_matrices_fk.md)；缺失前置可按[第16章](16_prerequisites_and_deeper_topics.md)补课。
+
 接着读[代数、集合、微积分和概率各自解决什么问题](13_systems_deepening.md)，用维度、差分和误差传播把数学接到机器人计算。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。

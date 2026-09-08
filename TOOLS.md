@@ -2,7 +2,7 @@
 
 工具的角色、历史与协作流程见[开发工具链专题](handbook/12_developer_toolchain.md)：Git、GitHub/GitLab/Gitea、Issue/PR、CI、调试、环境、容器与数据版本。按一个具体任务选工具，再用附带模板练习。
 
-**浏览器Python课堂：** [JupyterLab安装、代码编辑、运行与外部工具调用](INTERACTIVE.md)。11本Notebook已经包含可运行示例；第七天演示调用脚本、测试和保存报告。
+**浏览器Python课堂：** [JupyterLab安装、代码编辑、运行与外部工具调用](INTERACTIVE.md)。13本Notebook已经包含可运行示例；第七天演示调用脚本、测试和保存报告。
 
 第一次接触终端或Python，先走 [从零操作卡](beginner/COMPUTER_FIRST_STEPS.md)。本页用于已经会打开文件和运行命令后的进一步操作。
 

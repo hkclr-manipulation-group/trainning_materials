@@ -1,5 +1,7 @@
 # 01｜本体设计：任务怎样影响结构和控制
 
+读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
+
 接着读[本体设计的深入路线](13_systems_deepening.md)：从任务约束推到传动比、静态力矩、精度、惯量和刚度，再核对URDF声明。
 
 这是进阶阅读。零基础先完成 [七天正文](../WEEK_PLAN.md)，不认识符号时查 [数学小台阶](../beginner/MATH_STEPS.md)，先读 [算法故事](../beginner/ALGORITHM_STORIES.md)建立直觉。
