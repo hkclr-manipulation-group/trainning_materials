@@ -1,14 +1,12 @@
 # 第三天｜给机器人寄一封不会看错的信
 
-本日的字段解释配合[物理连接讲义](../handbook/14_physical_connections.md)：把TX/RX、收发器、总线、帧与命令逐层对应。
+[七天路线与本日过关](../WEEK_PLAN.md#day3) · [本日实验](../notebooks/03_communication.ipynb) · [运行方法](../INTERACTIVE.md)
 
-完成本日再深入：[通信历史与协议栈](../handbook/10_communication_stack_history.md)，并运行[08协议实验](../notebooks/08_protocol_stack.ipynb)。从一条指令追到每层字节，再区分传到、解析和执行。
+## 先接上前一步
 
-**边读边做：** [本日可编辑Python实验](../notebooks/03_communication.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
+昨天定义了关节与零位，今天把“哪个关节转多少”写成消息，并判断反馈是否新鲜。毫弧度先作为角度单位使用，明天再与度和三角函数联系起来。消息送达之后，我们才能继续问这些角度把工具带到哪里。
 
-昨天做好了两连杆模型。今天先不研究电机怎样转，只研究指令怎样到达设备、反馈怎样回来。
-
-把通信想成寄信：信里要写清收件人、事情内容和这是不是新的一封。邮递员送到信箱，并不能证明收件人已经把事情办好。
+先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
 
 ## 第1步：先区分四个时刻
 
@@ -70,3 +68,9 @@ SPI练习数据在 [spi_mode0.csv](../labs/data/spi_mode0.csv)，先看CLK从0�
 答案：①250。②不一定，可能是重复或过期消息。③161毫秒。交一条逐字段解读和一次超时计算。
 
 现在知道怎样可靠描述命令了。下一天回答更核心的问题：要到某个位置，两个关节到底该转多少？进入 [第四天](day04_control.md)。
+
+## 主线完成后再深入
+
+[本日扩展小课堂](../handbook/17_extension_workshops.md#day3)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。
+
+[上一天](day02_body_and_urdf.md) · [返回七天路线](../WEEK_PLAN.md#day3) · [下一天](day04_control.md)

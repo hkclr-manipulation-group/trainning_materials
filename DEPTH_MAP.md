@@ -1,10 +1,10 @@
-# 自学深度地图：先建立全貌，再沿专题深入
+# 技术深度地图：按问题查阅
 
-新增连续讲解：[物理连接与链路](handbook/14_physical_connections.md) → [坐标、矩阵与FK](handbook/15_frames_matrices_fk.md) → [全课程前置/深入路线](handbook/16_prerequisites_and_deeper_topics.md)。基础不足时按诊断题补一小节，深入内容再接原手册。
+第一周按[七天路线](WEEK_PLAN.md)学习。本页用于已经知道自己要查什么的人；想继续学“本周暂缓”的主题，先用[扩展选课表](EXTENSIONS.md)，每个主题都有连续解释和练习。
 
-第一周仍以每天约3小时的入门主线为基准。新增专题用于替换当天较浅的重复练习或在后续继续学，不把所有论文和推导塞进七天。每个主题先讲动机和直觉，再给数学、实现、失败与验证。
+矩阵、坐标、左右乘与FK集中在[第15章](handbook/15_frames_matrices_fk.md)；物理连接在[第14章](handbook/14_physical_connections.md)；缺少数学或专业先修时查[第16章](handbook/16_prerequisites_and_deeper_topics.md)。编号代表资料位置，不代表必须从00到17连续通读。
 
-| 主题 | 起步 | 新增深入内容 | 动手与证据 |
+| 主题 | 起步 | 深入内容 | 动手与证据 |
 |---|---|---|---|
 | 数学 | [数学台阶](beginner/MATH_STEPS.md) | [代数、集合、微积分、概率的分工](handbook/13_systems_deepening.md) | 矩阵维度、中央差分、局部近似误差 |
 | 本体 | [本体手册](handbook/01_body.md) | [任务约束、传动、精度、惯量与刚度](handbook/13_systems_deepening.md) | 静态力矩、URDF与FK对照 |
@@ -20,6 +20,6 @@
 
 能够说明它为什么被需要，写出输入输出与假设，手算一个小例子，运行实现，再构造一个失败案例。最后解释替代方法的取舍，并知道哪些结果还没有验证。
 
-新增[逐步演示器](assets/interactive/concept_player.html)将“看哪里、发生了什么、为什么、不能推出什么”放在每一步画面里。它可离线打开，不需Jupyter；要修改算法代码则进入上表Notebook。
+[逐步演示器](assets/interactive/concept_player.html)将“看哪里、发生了什么、为什么、不能推出什么”放在每一步画面里。它可离线打开，不需Jupyter；要修改算法代码则进入上表Notebook。
 
 复习使用[扩展练习与解析](assessments/EXTENDED_QUESTIONS.md)。文献无需从第一页连续读到最后：先带着一个具体问题读定义、方法、实验条件和限制，再回课程实现做对照。

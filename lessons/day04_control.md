@@ -1,12 +1,12 @@
 # 第四天｜先算到哪里，再学怎样到那里
 
-正运动学的逐节变换、左右乘和工具点手算见[第15章](../handbook/15_frames_matrices_fk.md)，不要跳过坐标约定直接记公式。
+[七天路线与本日过关](../WEEK_PLAN.md#day4) · [本日实验](../notebooks/04_kinematics_control.ipynb) · [运行方法](../INTERACTIVE.md)
 
-完成本日再深入：[IK方法家族](../handbook/11_inverse_kinematics_families.md)与[采样/延迟/控制](../handbook/13_systems_deepening.md)。用[09方法比较](../notebooks/09_ik_families.ipynb)、[10延迟实验](../notebooks/10_visual_reasoning.ipynb)验证想法。
+## 先接上前一步
 
-**边读边做：** [本日可编辑Python实验](../notebooks/04_kinematics_control.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
+昨天的消息已经能携带角度，今天先把角度换成位置，再讨论怎样到达。先学投影与FK/IK，再学轨迹和反馈；一次只解决一个问题。控制使用第三天的新鲜反馈，明天则检查整根手臂及运动途中有没有碰撞。
 
-你已经知道坐标、两根杆和消息。今天分三小段：给定角度算位置；给定位置找角度；运动中根据反馈纠正。三件事相关，但不是同一个问题。
+先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
 
 ## 第1步：斜杆在横向和竖向各占多少
 
@@ -73,3 +73,9 @@ PID是在此基础上加入“过去累积的差距”和“变化速度”的�
 答案：①它从第一杆方向开始量。②FK已知角度。③不能，真实控制、反馈、动力学与通信还要验证。交一行FK手算、一条IK结果和一段曲线解释。
 
 现在会算位置和运动了，但桌上可能有障碍。下一天学习如何避开它们：[第五天](day05_collision_workspace.md)。
+
+## 主线完成后再深入
+
+[本日扩展小课堂](../handbook/17_extension_workshops.md#day4)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。
+
+[上一天](day03_communication.md) · [返回七天路线](../WEEK_PLAN.md#day4) · [下一天](day05_collision_workspace.md)

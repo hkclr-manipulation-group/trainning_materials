@@ -1,51 +1,41 @@
 # 从纸条机械臂开始：机器人开发自学
 
-新增[坐标、矩阵乘法与正运动学](handbook/15_frames_matrices_fk.md)、[通信物理连接](handbook/14_physical_connections.md)和[前置知识/深入阅读](handbook/16_prerequisites_and_deeper_topics.md)。在线答疑的参考方案见[OpenMAIC适配说明](OPENMAIC.md)。
+这是一套无需讲师的机器人开发入门资料。从两根纸条和几个数字开始，逐步认识本体、通信、运动、避障、感知AI与软件开发。第一周每天约3小时，目标是理解各模块怎样配合，并交付一个自己能解释、能复现的角度到位置小工具。
 
-**新增深入路线：** [全课程深度地图](DEPTH_MAP.md)覆盖通信历史与协议栈、各类逆运动学、控制、感知、AI和工具链；[16主题逐步演示](assets/interactive/concept_player.html)可直接离线打开，配有观察提示、数值和解释；[20道扩展题与解析](assessments/EXTENDED_QUESTIONS.md)用于自检。
+**第一次来，打开[七天路线](WEEK_PLAN.md)，然后读[第一天](lessons/day01_system_and_code.md)。** 每天只沿“正文→一个实验→自检→下一天”前进。需要补基础或继续深入时，再用下面的入口。
 
-这套资料按中学生可起步的顺序编写：先用生活例子、纸笔和动画理解问题，再学几个数字怎样计算，最后运行代码。不会矩阵、微积分或编程也可以从第一天开始。需要深入时，再进入技术手册和新增的工程细节。
+| 你现在需要什么 | 去哪里 | 读到哪里可以回来 |
+|---|---|---|
+| 知道今天学什么、交什么 | [七天路线](WEEK_PLAN.md) | 当天过关题与衔接说明 |
+| 单位、坐标、角度或符号不懂 | [数学小台阶](beginner/MATH_STEPS.md) | 补会当前例题需要的一步 |
+| 不会打开终端或运行代码 | [电脑操作卡](beginner/COMPUTER_FIRST_STEPS.md) | 能运行和修改一个输入 |
+| 边读边改Python | [交互课堂安装](INTERACTIVE.md) → [课堂首页](notebooks/00_start_here.ipynb) | 当天01–07实验；08–12是选学 |
+| 想学本周暂缓的内容 | [扩展选课表](EXTENSIONS.md) | 一个专题的解释、算例、自检和参考阅读 |
+| 已有基础，按具体问题查技术细节 | [深度地图](DEPTH_MAP.md) | 对应手册与实验 |
 
-**第一周目标：看懂机器人各部分如何配合，完成一个自己能解释的小工具。** 每天的末尾都有自检和答案，遇到具体问题可以请教同事，无需讲师。
+## 一周围绕同一个问题
 
-**现在可以边读边改Python并运行：** 打开[交互课堂说明](INTERACTIVE.md)，安装一次后双击 `start_classroom.cmd`。13本Notebook包含代码编辑、关节/控制/滤波滑块、实际训练过程播放和工具调用。浏览器显示教材，本机Python负责计算；尚未部署公共网址。
+桌上有一块积木，机械臂怎样把它移到目标位置？我们先约定单位和任务，再描述手臂结构；结构需要命令和反馈；角度需要换成位置；运动需要避障；目标需要从感知得到；最后把这些知识整理成可靠的小工具。
 
-## 先走这条线
+学习例子统一使用30cm与20cm两杆。第一周有意把复杂任务拆开，各个练习可以独立完成。第七天交付的是FK小工具，完整抓取系统作为[后续系统集成专题](handbook/17_extension_workshops.md#day7)继续学习。
 
-1. [七天路线](WEEK_PLAN.md)：每天学什么，哪些暂时不用学。
-2. [第一天：让机器人听懂一句话](lessons/day01_system_and_code.md)：从任务、单位和位置开始。
-3. 看不懂符号时查 [数学小台阶](beginner/MATH_STEPS.md)；不会运行命令时查 [从零操作卡](beginner/COMPUTER_FIRST_STEPS.md)。
-4. 每天先猜动画结果，再播放，再做纸笔题和代码实验。参考 [自学方法](SELF_STUDY.md)。
+## 怎样看图、做实验和自检
 
-## 这次可直接使用的材料
+先预测画面下一步，再播放或手算，最后说明结果为什么变化。[16主题逐步演示](assets/interactive/concept_player.html)可离线打开，支持暂停和单步；[12段动画与分镜](assets/animations/README.md)用于配合正文，[技术图示](assets/README.md)供深入阅读时查阅。不是每天都要看完所有图。
 
-| 材料 | 入口 |
+正文每篇都有三题和答案；先用它们过关。需要额外练习时用[基础衔接题](assessments/FOUNDATION_BRIDGES.md)、[扩展题](assessments/EXTENDED_QUESTIONS.md)或[算法题](assessments/ALGORITHM_EXERCISES.md)。不会时按[自学方法](SELF_STUDY.md)定位具体一步，再带着[问题卡](templates/LEARNING_QUESTION.md)请教同事。
+
+## 资料库：用到时再查
+
+| 资料 | 用途 |
 |---|---|
-| 可编辑运行的13本Python交互教材 | [安装与使用](INTERACTIVE.md)、[课堂首页](notebooks/00_start_here.ipynb) |
-| 从通俗解释接到工程实现：推导、参数、接口与失败原因 | [工程细节](handbook/09_engineering_details.md) |
-| 重写后的七天正文：生活例子→分步计算→代码→自检 | [第一天](lessons/day01_system_and_code.md) |
-| 12段离线动画、12张四步分镜 | [动画索引](assets/animations/README.md) |
-| 14组进一步理解算法的PNG/SVG图 | [技术图示](assets/README.md) |
-| 原生Python动画播放器，可暂停、逐帧和慢放 | [播放说明](assets/animations/README.md) |
-| 从通俗比喻过渡到算法 | [算法故事](beginner/ALGORITHM_STORIES.md) |
-| 9类教学数值表与可核对的预期结果 | [参考数据说明](references/DATA_GUIDE.md) |
-| 4套团队模型、24个关节的文件声明快照 | [来源与范围](references/DATA_GUIDE.md) |
-| 分级阅读卡、BibTeX与外部数据集卡 | [文献阅读路线](references/READING_GUIDE.md) |
-| 深入原理、推导与方法比较 | [技术手册及算法地图](handbook/ALGORITHMS.md) |
-| 基础与算法实验、离线通信数据 | [基础实验](labs/README.md)、[算法实验](labs/ALGORITHMS.md) |
-| 自检与结业 | 每篇正文3题含答案；[原题库](assessments/QUESTIONS.md)、[算法题](assessments/ALGORITHM_EXERCISES.md)作为进阶 |
-| 团队项目与工具文档 | [项目地图](PROJECT_MAP.md)、[工具说明](TOOLS.md)、[来源索引](SOURCES.md) |
+| [参考数据](references/DATA_GUIDE.md)、[外部数据集](references/DATASETS.md) | 核对教学计算、模型声明和数据来源 |
+| [文献阅读路线](references/READING_GUIDE.md)、[先修与深入阅读](handbook/16_prerequisites_and_deeper_topics.md) | 按问题挑章节，补大学数学与专业原理 |
+| [算法故事](beginner/ALGORITHM_STORIES.md)、[算法地图](handbook/ALGORITHMS.md) | 从直觉进入方法比较和技术细节 |
+| [项目地图](PROJECT_MAP.md)、[工具说明](TOOLS.md)、[来源索引](SOURCES.md) | 回到团队文件与实际工具 |
+| [基础实验](labs/README.md)、[算法实验](labs/ALGORITHMS.md) | 查命令行实验的输入、输出和限制 |
+| [OpenMAIC参考方案](OPENMAIC.md) | 了解在线AI答疑的适配与待验证事项；不是主线安装要求 |
 
-## 能运行程序后再用这些命令
+安装一次后双击`start_classroom.cmd`启动本机JupyterLab：浏览器显示课程，本机Python计算。当前提供本地课堂，尚未部署公共网址。只想运行基础计算，可在仓库根目录执行`python labs/course_lab.py all`；其他命令见实验说明。
 
-在本仓库根目录运行，计算实验只需Python 3.10+标准库：
-
-```powershell
-python labs/course_lab.py all
-python labs/algorithm_lab.py all
-python -m unittest discover -s tests -v
-```
-
-想调角度：`python labs/kinematics_explorer.py`。想逐帧看动画：`python labs/animation_player.py`。这两个窗口需要可用Tcl/Tk与桌面；打不开时用已保存的GIF、PNG与CSV继续学习。
-
-教学数值、文件声明与外部数据来源已分开标注。它们不能直接作为电机额定参数或真机控制参数。交互课程更新于2026-09-08，实际检查范围见 [验证记录](VALIDATION.md)。
+教学数据、模型文件声明与硬件实测应区分；本课程不把离线实验写成真机验证。实际检查范围见[验证记录](VALIDATION.md)。

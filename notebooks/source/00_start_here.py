@@ -52,7 +52,7 @@ show_projection(45)
 # | 6 | [感知、滤波和学习](06_perception_learning.ipynb) | 误差降低是否代表机器人会抓取？ |
 # | 7 | [工具调用与软件交付](07_tools_and_delivery.ipynb) | 怎么证明 AI 帮写的代码符合要求？ |
 #
-# 每天先读文字正文约 45–60 分钟，再用本页实验 60–90 分钟，最后记录预测、结果和疑问。公式推导和进阶题可以进入第二周，不要求一天全做完。
+# 时间安排统一以[七天路线](../WEEK_PLAN.md)为准：先复习、读正文和看图，再手算、做一个实验、自检订正。手册推导和专题实验按需延后。
 #
 # ## 必须知道的四个操作
 #
@@ -71,20 +71,16 @@ display(Image(filename=str(ROOT / "assets" / "animations" / "fk_steps.png")))
 print("准备完成。打开第一天实验。")
 
 # %% [markdown]
-# ## 完成基础后，继续深入
+# ## 完成主线后，按问题选一条扩展
 #
-# 从[自学深度地图](../DEPTH_MAP.md)按问题选专题，不要求第一周全部完成。
+# [扩展选课表](../EXTENSIONS.md)给出先修、例子、自检与参考资料。第一周只需要上表的01–07；下面五本专题按需选择。
 #
-# - [08 协议栈、分帧与仲裁](08_protocol_stack.ipynb)：一条消息怎样逐层封装，为什么一次接收可能只有半条消息？
-# - [09 逆运动学方法比较](09_ik_families.ipynb)：几何、代数、解集、Jacobian和数据驱动分别解决什么问题？
-# - [10 动画背后的计算](10_visual_reasoning.ipynb)：修改局部步长、反馈延迟、滤波参数，观察实际重算结果。
-# - [开发工具链](../handbook/12_developer_toolchain.md)：从Git与GitHub到CI、环境、调试和数据版本。
+# | 想解决的问题 | 实验 | 先读哪里 |
+# |---|---|---|
+# | 消息怎样分层、分帧、仲裁 | [08 协议栈](08_protocol_stack.ipynb) | [通信扩展](../handbook/17_extension_workshops.md#day3) |
+# | IK为何多解、停滞、需要初值 | [09 IK方法](09_ik_families.ipynb) | [逆变换与优化](../handbook/17_extension_workshops.md#day4) |
+# | 步长、延迟、滤波怎样改变结果 | [10 动画背后的计算](10_visual_reasoning.ipynb) | [系统深入](../handbook/13_systems_deepening.md) |
+# | 矩阵乘法、坐标、左右乘与FK | [11 矩阵与FK](11_frames_matrices_fk.ipynb) | [矩阵起步](../handbook/17_extension_workshops.md#day1) |
+# | 引脚、电平与时间怎样产生字节 | [12 物理链路](12_physical_links.ipynb) | [物理连接](../handbook/14_physical_connections.md) |
 #
-# 先看图建立直觉时，打开[逐步演示指南](../assets/interactive/README.md)，用浏览器直接打开其中的HTML；16个主题都支持暂停、单步和拖动进度。每步的解释与数值对应，改代码则回到Notebook。
-
-# %% [markdown]
-# ## 基础知识仍有跳跃时，从这两本补起
-# - [11 坐标、矩阵与FK](11_frames_matrices_fk.ipynb)：先看同一个点，再做行乘列，最后逐节连接机械臂。
-# - [12 物理链路](12_physical_links.ipynb)：从TX/RX、时钟和差分线回到报文与控制。
-# - [前置知识与参考资料](../handbook/16_prerequisites_and_deeper_topics.md)：每个主题说明缺哪一块、先看哪里。
-# - [OpenMAIC答疑试讲材料](../OPENMAIC.md)：AI讲解与Jupyter实际执行的分工。
+# 其他专题包括类与线程、六轴设计与惯量、规划理论、反向传播和系统集成，都从[扩展选课表](../EXTENSIONS.md)进入。看图用[逐步演示指南](../assets/interactive/README.md)；找专业文献用[先修与阅读路线](../handbook/16_prerequisites_and_deeper_topics.md)。

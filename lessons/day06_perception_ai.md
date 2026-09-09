@@ -1,10 +1,12 @@
 # 第六天｜让机器人看见，再学着做
 
-完成本日再深入：[误差传播、估计、AI表示与闭环评价](../handbook/13_systems_deepening.md)。[IK两解平均实验](../notebooks/09_ik_families.ipynb)提供“平均预测为何失败”的具体反例。
+[七天路线与本日过关](../WEEK_PLAN.md#day6) · [本日实验](../notebooks/06_perception_learning.ipynb) · [运行方法](../INTERACTIVE.md)
 
-**边读边做：** [本日可编辑Python实验](../notebooks/06_perception_learning.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
+## 先接上前一步
 
-你已经知道位置需要参考系，动作需要反馈。今天把相机和学习接进来，仍然从可手算的小问题开始。
+前面假定目标和障碍位置已知，今天追问这些数从哪里来。先把像素连接到相机与基座坐标，再理解噪声、滤波和学习。学习顺序先运动后感知，真实运行时则常由感知提供目标，再交给规划控制。
+
+先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
 
 ## 第1步：照片上的点还不是桌上的点
 
@@ -65,3 +67,9 @@ ACT会预测一段动作；Diffusion Policy通过逐步去噪生成动作。先�
 答案：①不能，还缺深度、标定和工具定义等。②不一定，可能滞后。③检验新输入表现，避免记住练习题造成误判。
 
 最后一天把这些知识做成一个小工具，并学习怎样让AI帮忙写代码而不盲信它：[第七天](day07_vibe_coding.md)。
+
+## 主线完成后再深入
+
+[本日扩展小课堂](../handbook/17_extension_workshops.md#day6)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。
+
+[上一天](day05_collision_workspace.md) · [返回七天路线](../WEEK_PLAN.md#day6) · [下一天](day07_vibe_coding.md)

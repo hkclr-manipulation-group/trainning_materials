@@ -1,10 +1,12 @@
 # 第五天｜终点能到，路上也可能撞到
 
-完成本日再深入：[规划方法与边检查](../handbook/13_systems_deepening.md)。在[逐步演示器](../assets/interactive/concept_player.html)选择碰撞近似或A*主题，看数值和几何如何对应。
+[七天路线与本日过关](../WEEK_PLAN.md#day5) · [本日实验](../notebooks/05_collision_planning.ipynb) · [运行方法](../INTERACTIVE.md)
 
-**边读边做：** [本日可编辑Python实验](../notebooks/05_collision_planning.ipynb)（[启动方法](../INTERACTIVE.md)）。技术细节补充见[工程实现](../handbook/09_engineering_details.md)。
+## 先接上前一步
 
-昨天找到了一些到达目标的角度。今天问两个新问题：这些姿态有没有碰撞？从现在走到目标的途中有没有碰撞？先把这两个问题分开。
+昨天的一组关节角既决定工具点，也决定整根手臂的姿态。今天从“点能到”扩展到“整个身体和沿途能不能通过”，再用方格搜索学习绕行。这里先假定障碍位置已知，明天学习从感知得到位置及其误差。
+
+先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
 
 ## 第1步：用走廊理解路径
 
@@ -59,3 +61,9 @@
 答案：①不能。②不能直接等同。③0.75。交一张19步路线和一份碰撞判断理由。
 
 下一天，我们让机器人“看见”物体，并了解机器学习怎样从例子中形成规则：[第六天](day06_perception_ai.md)。
+
+## 主线完成后再深入
+
+[本日扩展小课堂](../handbook/17_extension_workshops.md#day5)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。
+
+[上一天](day04_control.md) · [返回七天路线](../WEEK_PLAN.md#day5) · [下一天](day06_perception_ai.md)
