@@ -1,5 +1,7 @@
 # 03｜接口、嵌入式与网络：沿一条数据链定位问题
 
+**本门连续带练：**[直接进入逐步案例、练习与解析](#worked-lessons)。TCP四次拆包→RS-485/SPI完成时序→队列积压。
+
 [工程课程](../ENGINEERING_PATH.md) · 后续：[CAN FD](04_canfd.md)、[EtherCAT](05_ethercat.md)
 
 任务：画出电脑到设备的完整连接，为每一段写电气、字节、调度和错误处理约定。这里把已有[物理连接手册](../handbook/14_physical_connections.md)和[协议栈手册](../handbook/10_communication_stack_history.md)接到实际调试顺序。

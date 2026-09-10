@@ -92,18 +92,18 @@ class FeedbackRouter:
 
 def drive_decision(al_state, statusword, feedback_valid, mode_confirmed,
                    target_aligned, start_requested):
-    """Read-only teaching decision table; never writes controlwords to a bus."""
+    """Read-only decisions; target_aligned is a startup latch, not tracking error."""
     state = cia402_state(statusword)
     if not feedback_valid:
         return "stop_policy_invalid_feedback"
     if state in ("fault", "fault_reaction_active"):
         return "diagnose_fault_manual_reset_required"
     if al_state != "OP":
-        return "wait_bus_configuration"
+        return "stop_policy_bus_not_op" if state == "operation_enabled" else "wait_bus_configuration"
     if not start_requested:
         return "stop_policy" if state == "operation_enabled" else "hold_disabled"
     if not mode_confirmed or not target_aligned:
-        return "wait_mode_and_target"
+        return "stop_policy_mode_or_target" if state == "operation_enabled" else "wait_mode_and_target"
     return {"switch_on_disabled": "request_shutdown_0x0006",
             "ready_to_switch_on": "request_switch_on_0x0007",
             "switched_on": "request_enable_0x000f",

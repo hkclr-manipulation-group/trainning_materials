@@ -9,6 +9,10 @@
 # 本课在浏览器里操作，Python 在启动 JupyterLab 的电脑上执行。安装依赖后，七天实验无需外网、机器人或 GPU。文献链接需要网络。
 #
 # [完整操作说明](../INTERACTIVE.md) · [七天文字正文](../WEEK_PLAN.md) · [技术细节路线](../handbook/09_engineering_details.md)
+#
+# ## 接着做完整带练
+# 
+# [33节逐步正文](../ENGINEERING_PATH.md)已经接到四本新课堂：[13 CAN FD](13_canfd_workshop.ipynb)、[14 EtherCAT](14_ethercat_workshop.ipynb)、[15 电机控制](15_control_workshop.ipynb)、[16 系统联调](16_system_workshop.ipynb)。默认数值与曲线已保存；先预测，再运行和修改，最后对照每节解析。所有新实验均为离线教学。
 
 # %% [markdown]
 # ## 先试一次：把 300 改成 450

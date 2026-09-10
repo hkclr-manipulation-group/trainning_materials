@@ -1,5 +1,7 @@
 # 工程实验：用可复现数据练诊断
 
+除了下面的8类短实验，完整过程现在放在四本带练课堂：[CAN FD](../notebooks/13_canfd_workshop.ipynb)、[EtherCAT](../notebooks/14_ethercat_workshop.ipynb)、[电机控制](../notebooks/15_control_workshop.ipynb)、[系统联调](../notebooks/16_system_workshop.ipynb)。它们使用[workshop_lab.py](workshop_lab.py)，包含多步骤输入、图表、修改任务和解析；正文从[工程课程](../ENGINEERING_PATH.md)进入。
+
 [工程课程](../ENGINEERING_PATH.md) · 实现：[engineering_lab.py](engineering_lab.py)
 
 Python 3.10+标准库即可，在培训仓库根目录运行，不访问硬件。所有输入与输出都在脚本中可见；先手算再运行，之后改变一个输入验证自己的解释。输出保存到`outputs/engineering_<实验名>.json`。

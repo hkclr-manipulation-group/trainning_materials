@@ -1,6 +1,6 @@
 # 从纸条机械臂开始：机器人开发自学
 
-**完整工程学习从[工程课程总入口](ENGINEERING_PATH.md)进入。** 现有七天课作为基础层；工程层按11门展开数学、本体、电气与接口、CAN FD、EtherCAT、运动学与标定、控制、规划、感知、AI和软件交付。每门包含计算、配置/实现、故障案例与验收，配有8类离线工程实验。
+**完整工程学习从[工程课程总入口](ENGINEERING_PATH.md)进入。** 11门正文现有33节连续带练，逐步展开计算、编解码、状态变化、故障与答案。配套新增[CAN FD](notebooks/13_canfd_workshop.ipynb)、[EtherCAT](notebooks/14_ethercat_workshop.ipynb)、[电机控制](notebooks/15_control_workshop.ipynb)和[系统联调](notebooks/16_system_workshop.ipynb)四本可编辑课堂，包含默认运行结果和曲线。
 
 这是一套无需讲师的机器人开发入门资料。从两根纸条和几个数字开始，逐步认识本体、通信、运动、避障、感知AI与软件开发。第一周每天约3小时，目标是理解各模块怎样配合，并交付一个自己能解释、能复现的角度到位置小工具。
 
@@ -14,7 +14,7 @@
 | 要接线、调电机并完成工位交接 | [实操路线与三张操作卡](PRACTICAL_PATH.md) | 接线表、运动与停止实测、参数对照和复现记录 |
 | 单位、坐标、角度或符号不懂 | [数学小台阶](beginner/MATH_STEPS.md) | 补会当前例题需要的一步 |
 | 不会打开终端或运行代码 | [电脑操作卡](beginner/COMPUTER_FIRST_STEPS.md) | 能运行和修改一个输入 |
-| 边读边改Python | [交互课堂安装](INTERACTIVE.md) → [课堂首页](notebooks/00_start_here.ipynb) | 当天01–07实验；08–12是选学 |
+| 边读边改Python | [交互课堂安装](INTERACTIVE.md) → [课堂首页](notebooks/00_start_here.ipynb) | 01–07基础，08–12原理专题，13–16完整带练 |
 | 想学本周暂缓的内容 | [扩展选课表](EXTENSIONS.md) | 一个专题的解释、算例、自检和参考阅读 |
 | 已有基础，按具体问题查技术细节 | [深度地图](DEPTH_MAP.md) | 对应手册与实验 |
 
