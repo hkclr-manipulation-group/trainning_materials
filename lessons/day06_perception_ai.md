@@ -1,5 +1,7 @@
 # 第六天｜让机器人看见，再学着做
 
+**本门工程课程：**[感知与估计](../engineering/09_perception.md)及[AI与策略部署](../engineering/10_ai.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
+
 [七天路线与本日过关](../WEEK_PLAN.md#day6) · [本日实验](../notebooks/06_perception_learning.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步

@@ -84,3 +84,10 @@ print("准备完成。打开第一天实验。")
 # | 引脚、电平与时间怎样产生字节 | [12 物理链路](12_physical_links.ipynb) | [物理连接](../handbook/14_physical_connections.md) |
 #
 # 其他专题包括类与线程、六轴设计与惯量、规划理论、反向传播和系统集成，都从[扩展选课表](../EXTENSIONS.md)进入。看图用[逐步演示指南](../assets/interactive/README.md)；找专业文献用[先修与阅读路线](../handbook/16_prerequisites_and_deeper_topics.md)。
+
+# %% [markdown]
+# ## 接下来：11门工程课程
+# 
+# [工程课程总入口](../ENGINEERING_PATH.md)将各门类接到实际工作；[CAN FD](../engineering/04_canfd.md)和[EtherCAT](../engineering/05_ethercat.md)分别学习。先读对应正文，再按[工程实验说明](../labs/ENGINEERING.md)运行8类离线实验，最后用[工程报告](../templates/ENGINEERING_LAB.md)记录计算、配置、故障与验收。
+# 
+# 这些实验不会连接设备；真实接线、同步与运动验收另按工位完成。

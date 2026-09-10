@@ -1,5 +1,7 @@
 # 04｜碰撞与规划：从找路到可执行轨迹
 
+**对应工程训练：**[本门完整任务](../engineering/08_planning.md)，将本章原理接到配置、实现、排错和交付。
+
 读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
 
 接着读[图搜索、采样、优化及边检查](13_systems_deepening.md)。[逐步演示器](../assets/interactive/concept_player.html)可查看A*每次扩展的g/h/f，以及碰撞近似过大误报、过小覆盖不足的区别。

@@ -1,5 +1,7 @@
 # 第五天｜终点能到，路上也可能撞到
 
+**本门工程课程：**[碰撞、规划与工作空间](../engineering/08_planning.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
+
 [七天路线与本日过关](../WEEK_PLAN.md#day5) · [本日实验](../notebooks/05_collision_planning.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步

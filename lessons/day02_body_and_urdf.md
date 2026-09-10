@@ -1,5 +1,7 @@
 # 第二天｜用两根纸条做一只机械臂
 
+**本门工程课程：**[本体、传动与电气](../engineering/02_body.md)及[模型与标定](../engineering/06_kinematics.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
+
 [七天路线与本日过关](../WEEK_PLAN.md#day2) · [本日实验](../notebooks/02_body_and_frames.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步

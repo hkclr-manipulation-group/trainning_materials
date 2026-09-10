@@ -1,5 +1,7 @@
 # 第四天｜先算到哪里，再学怎样到那里
 
+**本门工程课程：**[运动学与标定](../engineering/06_kinematics.md)及[控制与实时执行](../engineering/07_control.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
+
 [七天路线与本日过关](../WEEK_PLAN.md#day4) · [本日实验](../notebooks/04_kinematics_control.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步

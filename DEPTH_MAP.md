@@ -1,5 +1,7 @@
 # 技术深度地图：按问题查阅
 
+要系统学习各门类的工程工作，使用[11门工程课程](ENGINEERING_PATH.md)。下面保留原理手册索引；工程课补上选型、配置、时序、故障复现和交付。通信进一步分为[通用接口](engineering/03_interfaces.md)、[CAN FD](engineering/04_canfd.md)与[EtherCAT](engineering/05_ethercat.md)，不能只按一个CAN小节代替。
+
 第一周按[七天路线](WEEK_PLAN.md)学习。本页用于已经知道自己要查什么的人；想继续学“本周暂缓”的主题，先用[扩展选课表](EXTENSIONS.md)，每个主题都有连续解释和练习。
 
 矩阵、坐标、左右乘与FK集中在[第15章](handbook/15_frames_matrices_fk.md)；物理连接在[第14章](handbook/14_physical_connections.md)；缺少数学或专业先修时查[第16章](handbook/16_prerequisites_and_deeper_topics.md)。编号代表资料位置，不代表必须从00到17连续通读。

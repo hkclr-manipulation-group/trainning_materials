@@ -33,3 +33,6 @@ python -m unittest discover -s tests -v
 ```
 
 测试覆盖手算位置、几何不可达、固定字节向量、负数、坏包、超时边界、控制限速与收敛、球接触、回归的已知解和退化输入。测试通过只支持这些离线行为，不支持硬件控制结论。
+# 工程实验入口
+
+[8类工程实验](ENGINEERING.md)新增CAN FD长度、EtherCAT教学PDO/状态、周期预算、雅可比、规划漏检、视觉时间误差、数据拆分和恢复状态练习。运行`python labs/engineering_lab.py all`，配合[工程课程](../ENGINEERING_PATH.md)完成报告。

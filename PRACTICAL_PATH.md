@@ -1,5 +1,7 @@
 # 从读懂资料到完成单电机工位
 
+本路线完成第一次工位操作。要继续学习各门类的实现与诊断，接入[工程课程](ENGINEERING_PATH.md)，尤其是[CAN FD完整链路](engineering/04_canfd.md)、[EtherCAT主从与同步](engineering/05_ethercat.md)及[控制与实时执行](engineering/07_control.md)。
+
 [首页](README.md) · [七天基础课](WEEK_PLAN.md) · [术语表](GLOSSARY.md)
 
 这条路线的交付是：另一位同事拿到你的接线图、参数表、程序版本和日志，能重复完成“连接一个电机→读反馈→小范围运动→停止→解释误差”。接线和电机控制是本路线的必做项。七天课提供基础；真机工位另按过关情况安排时间，不要求把全部操作挤进21小时。

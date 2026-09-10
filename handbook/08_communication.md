@@ -1,5 +1,7 @@
 # 08｜通信自学：字节、时序与故障
 
+**对应工程训练：**[本门完整任务](../engineering/03_interfaces.md)，将本章原理接到配置、实现、排错和交付。
+
 物理接线、电平、链路时序和项目桥接链先看[第14章](14_physical_connections.md)，再把本章的应用报文放回完整链路中理解。
 
 从字段继续向上下层展开：[通信历史与协议栈](10_communication_stack_history.md)讲分层、封装、TCP分帧、CAN仲裁与实时性；[可编辑实验](../notebooks/08_protocol_stack.ipynb)逐字节检查结果。

@@ -1,5 +1,7 @@
 # 第三天｜给机器人寄一封不会看错的信
 
+**本门工程课程：**[接口与网络](../engineering/03_interfaces.md)、[CAN FD](../engineering/04_canfd.md)和[EtherCAT](../engineering/05_ethercat.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
+
 [七天路线与本日过关](../WEEK_PLAN.md#day3) · [本日实验](../notebooks/03_communication.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步

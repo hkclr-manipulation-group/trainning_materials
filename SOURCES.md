@@ -73,3 +73,8 @@ Modern Robotics、OMPL、MIT、OpenCV和Open3D的页面正文已读取；ACT、D
 新增讲义的来源按用途列在第14至16章末尾：NXP I²C原始规范、TI RS-485设计指南、CAN in Automation、USB-IF、EtherCAT官方资料；矩阵与FK以MIT 18.06、Modern Robotics及URDF定义为参考。所有数值小例子由本课程自行推导和代码检查，不是外部设备的测试结果。
 
 团队链路例子来自工作区 `f446_spi_can_board/README.md`，记录SPI固定快照、CAN1/2和MCU引脚的描述；本课没有据此推测接插件针脚。OpenMAIC参考用户指定仓库的main README，读取哈希和未验证范围见[核查记录](integrations/openmaic/source_review.json)与[适配说明](OPENMAIC.md)。
+# 工程课程来源与使用方式（2026-09-10）
+
+[工程课程](ENGINEERING_PATH.md)中的通信事实和工具接口按Linux内核SocketCAN文档、linux-can/can-utils、CiA/Bosch CAN FD资料、Beckhoff设备/状态说明和IgH主站手册核对；课程正文在相应内容处给出链接。CAN FD团队例子另静态读取当前工作区的适配器与电机源码，源码配置值不被当成全工位推荐参数。
+
+运动学、规划、视觉与策略部分按正文链接回到Modern Robotics、OMPL、OpenCV及ACT/Diffusion Policy作者资料；教学计算、工位任务和合成日志由本课程构造。未验证所有外链持续可用，部分PDF直接获取失败；未进行EtherCAT或CAN FD真机运行。

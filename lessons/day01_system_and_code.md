@@ -1,5 +1,7 @@
 # 第一天｜先让机器人听懂一句话
 
+**本门工程课程：**[工程数学](../engineering/01_math.md)与[软件交付](../engineering/11_software.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
+
 [七天路线与本日过关](../WEEK_PLAN.md#day1) · [本日实验](../notebooks/01_units_and_code.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步

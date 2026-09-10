@@ -1,5 +1,7 @@
 # 02｜运动学：从两根杆推到六轴机械臂
 
+**对应工程训练：**[本门完整任务](../engineering/06_kinematics.md)，将本章原理接到配置、实现、排错和交付。
+
 需要把矩阵和变换顺序从头讲清时，先读[坐标、矩阵与FK](15_frames_matrices_fk.md)，再进入本章和IK专题。
 
 完整方法比较见[逆运动学家族](11_inverse_kinematics_families.md)：几何、代数消元、解集与约束、Jacobian、优化和数据驱动。用[专题实验](../notebooks/09_ik_families.ipynb)观察两支正确解的平均为什么反而不正确。
