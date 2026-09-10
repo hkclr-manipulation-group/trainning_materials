@@ -1,5 +1,7 @@
 # 03｜动力学、轨迹与控制算法
 
+要实际调电机时，先沿[单电机实操路线](../PRACTICAL_PATH.md)验证接线、反馈和运动，再用[控制操作卡](../practical/03_control.md)建立基线、逐项调整并比较曲线。本章公式用于解释结果，教学参数不能直接作为真机设置。
+
 读到深入知识卡住时，先用[前置与深入路线](16_prerequisites_and_deeper_topics.md)判断缺少的是直觉、计算还是工程背景，再看对应的补课资料。
 
 接着读[采样、延迟、串级、前馈与LQR/MPC](13_systems_deepening.md)，并在[可编辑实验](../notebooks/10_visual_reasoning.ipynb)中比较同一控制器在不同反馈延迟下的结果。
