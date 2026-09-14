@@ -69,6 +69,8 @@ ROS 2 的 topic 适合持续数据流，service 适合短请求响应，action �
 
 ## 4. 碰撞工具环境
 
+团队设计工具的建设顺序见[机械臂设计开发流程：还需要哪些工具](ROBOT_DEVELOPMENT_PATH.md#4-还需要哪些工具)。优先整合模型发布、版本检查、统一报告与方案对比；动力学和结构分析按项目缺口再接入。候选工具不属于本课程必装项，工作台也尚未实现。
+
 在 `collision_shpere_generation` 项目自己的环境中按 README 安装 `python -m pip install -e ".[viewer]"`，运行 viewer。需要桌面、Qt 和 OpenGL。工作空间 GPU 计算另需相容的 cuRobo/CUDA 环境；不要把这些依赖装进本课程标准库实验环境。
 
 工具使用记录至少写下：操作系统、工具版本、工作目录、命令、输入、预期、实际结果。界面按钮位置或依赖版本随工具更新，按 [来源索引](SOURCES.md) 核对对应版本。

@@ -1,5 +1,7 @@
 # 团队资料地图
 
+2026-09-14新增[机械臂设计开发流程](ROBOT_DEVELOPMENT_PATH.md)，把现有项目映射到需求、选型、建模、分析、样机与验收，并给出工具整合优先级。近期内部球接入发现的模型版本错配，见[工作空间模型迁移记录](../robot_workspace_dexterous/models/interior_sync_report.json)；该案例用于说明模型包需要同时核对版本与坐标。
+
 2026-09-10新增工程阅读入口：[CAN FD课程](engineering/04_canfd.md)逐项对照`cxt_canfd`、`zlg_canfd`与`zlg_canfd_whj_motor`的配置/收发实现；[EtherCAT课程](engineering/05_ethercat.md)给出通用主站调试路线。本次工作区检索未找到可直接采用的EtherCAT工位实现，主站、ESI与驱动器型号仍需由实际工位资料确认。
 
 以下路径按当前工作区检查，日期 2026-09-07。链接指向本仓库的同级项目；只复制本培训仓库时，基础讲义和实验仍可用，但这些项目链接需要相应仓库。
