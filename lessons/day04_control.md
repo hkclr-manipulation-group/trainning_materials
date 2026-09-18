@@ -1,7 +1,5 @@
 # 第四天｜先算到哪里，再学怎样到那里
 
-**本门工程课程：**[运动学与标定](../engineering/06_kinematics.md)及[控制与实时执行](../engineering/07_control.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
-
 [七天路线与本日过关](../WEEK_PLAN.md#day4) · [本日实验](../notebooks/04_kinematics_control.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步
@@ -10,7 +8,7 @@
 
 昨天的消息已经能携带角度，今天先把角度换成位置，再讨论怎样到达。先学投影与FK/IK，再学轨迹和反馈；一次只解决一个问题。控制使用第三天的新鲜反馈，明天则检查整根手臂及运动途中有没有碰撞。
 
-先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
+先读正文，再做本课实验和三道自检题。
 
 ## 第1步：斜杆在横向和竖向各占多少
 
@@ -78,8 +76,6 @@ PID是在此基础上加入“过去累积的差距”和“变化速度”的�
 
 现在会算位置和运动了，但桌上可能有障碍。下一天学习如何避开它们：[第五天](day05_collision_workspace.md)。
 
-## 主线完成后再深入
-
-[本日扩展小课堂](../handbook/17_extension_workshops.md#day4)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。
+需要数值IK、PID、轨迹或优化推导时，去[扩展资料](../EXTENSIONS.md)。
 
 [上一天](day03_communication.md) · [返回七天路线](../WEEK_PLAN.md#day4) · [下一天](day05_collision_workspace.md)

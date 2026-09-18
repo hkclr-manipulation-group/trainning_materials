@@ -1,54 +1,55 @@
-# 第一周之后：每个暂缓主题都有下一步
+# 扩展资料
 
-若需要各门类完整的工程训练，请优先按[工程课程](ENGINEERING_PATH.md)推进；本页继续作为单个原理问题的短课索引。CAN FD与EtherCAT已各自独立成课，其他门类也有实现、诊断和交付任务。
+[首页](README.md) · [学习路线](WEEK_PLAN.md)
 
-[返回七天主线](WEEK_PLAN.md) · [按技术问题查手册](DEPTH_MAP.md)
+按当前问题选一项即可。每个专题都有本地解释、算例和自检，外部资料打不开也可以先学。
 
-“本周选学”表示可以安排到后续学习，不表示它不重要。先完成当天正文与过关题，再选一个专题。下面每个入口都有本地解释、算例、练习答案和指定参考阅读；外部资料打不开，也能先做本地例子。
+## 随课深入
 
-表中的时间是第一次阅读和做小例子的建议预算，不是掌握整门学科所需时间。研究论文、完整系统和硬件实践需要另行安排。
+| 基础课 | 想进一步了解 | 入口 |
+|---|---|---|
+| 1 任务与代码 | 矩阵、类与线程 | [矩阵](handbook/17_extension_workshops.md#day1) · [对象与并发](handbook/17_extension_workshops.md#software) |
+| 2 本体与模型 | 团队模型比较、六轴设计、惯量 | [模型比较](references/LESSON_EXTENSIONS.md#day2) · [结构到动力学](handbook/17_extension_workshops.md#day2) |
+| 3 通信与反馈 | 协议分层、抓包、SPI与电气连接 | [通信工具](references/LESSON_EXTENSIONS.md#day3) · [总线连接](handbook/17_extension_workshops.md#day3) |
+| 4 运动与控制 | 逆变换、数值IK、PID与优化 | [运动与控制补充](references/LESSON_EXTENSIONS.md#day4) · [推导与算例](handbook/17_extension_workshops.md#day4) |
+| 5 碰撞与规划 | 工作空间比较、高维规划 | [规划补充](references/LESSON_EXTENSIONS.md#day5) · [高维与概率保证](handbook/17_extension_workshops.md#day5) |
+| 6 感知与AI | 学习方法、数据集、网络训练 | [AI与数据](references/LESSON_EXTENSIONS.md#day6) · [训练推导](handbook/17_extension_workshops.md#day6) |
+| 7 软件交付 | 扩展项目、真机部署与系统集成 | [后续项目](references/LESSON_EXTENSIONS.md#day7) · [从工具到系统](handbook/17_extension_workshops.md#day7) |
 
-| 对应天 | 原来暂缓的内容 | 先补什么 | 本地入口与第一次完成的事 | 建议分段 |
-|---|---|---|---|---|
-| 1 | 矩阵 | 坐标、乘法和加法 | [矩阵为什么有用](handbook/17_extension_workshops.md#day1)：手算一个点旋转前后的坐标；再读第15章 | 2次×45分钟 |
-| 1 | 类、线程 | 变量、函数、输入输出 | [对象与并发](handbook/17_extension_workshops.md#software)：区分对象状态，画出反馈队列与超时 | 2次×45分钟 |
-| 2 | 六轴设计、惯量矩阵 | 力矩、轴、质量、矩阵乘法 | [结构到动力学](handbook/17_extension_workshops.md#day2)：算长方体惯量，列设计约束 | 3次×45分钟 |
-| 3 | 总线电气细节 | 电压、参考地、位和时间 | [连接到有效消息](handbook/17_extension_workshops.md#day3)：算UART时间和终端并联，按层查故障 | 3次×45分钟 |
-| 4 | 求逆矩阵、优化推导 | 坐标变换、函数、斜率 | [逆变换到数值IK](handbook/17_extension_workshops.md#day4)：手算逆平移与一次阻尼更新 | 3次×45分钟 |
-| 5 | 高维规划证明 | 集合、概率、路径与边检查 | [高维与概率保证](handbook/17_extension_workshops.md#day5)：算网格规模，解释有限时间与渐近结论 | 2次×45分钟 |
-| 6 | 神经网络训练细节 | 函数、导数、训练/验证/测试 | [训练到底改了什么](handbook/17_extension_workshops.md#day6)：手算前向、反向和一次更新 | 3次×45分钟 |
-| 7 | 真机部署、完整系统开发 | 接口、状态、测试、版本 | [从工具到系统](handbook/17_extension_workshops.md#day7)：做离线集成合同与故障用例 | 3次×45分钟，硬件实践另排 |
+先修顺序：坐标 → 矩阵 → 刚体变换 → Jacobian → 数值IK；力矩与矩阵 → 动力学；函数与导数 → 网络训练；集合与概率 → 采样规划；函数与状态 → 并发与集成。缺哪一步，就补对应例子。
 
-## 每个专题都按四步读
+## 面向实际工作
 
-先读“为什么现在需要它”，再做最小算例；用自己的话解释自检答案，最后带着具体问题打开参考书。不要为了理解一行矩阵先从头学完整本线性代数。
+| 工作方向 | 资料 |
+|---|---|
+| 接线、读反馈、调电机 | [单电机实操路线](PRACTICAL_PATH.md) · [工位记录](templates/MOTOR_COMMISSIONING.md) |
+| 选型、配置、计算与排错 | [11门工程专题](ENGINEERING_PATH.md) · [工程实验](labs/ENGINEERING.md) |
+| 机械臂方案设计与团队评审 | [设计开发流程](ROBOT_DEVELOPMENT_PATH.md) · [评审模板](templates/ROBOT_DESIGN_REVIEW.md) |
+| 按技术问题查公式与方法 | [深度地图](DEPTH_MAP.md) · [算法故事](beginner/ALGORITHM_STORIES.md) · [算法地图](handbook/ALGORITHMS.md) |
 
-不同主题会共享基础。例如第2天的惯量矩阵和第4天的逆变换，都要用第1天扩展里的矩阵；因此表格按原课程归属列出，实际深入顺序应服从先修关系。
+机械方向可从结构与惯量开始，运动方向从变换与IK开始，感知方向从坐标与误差开始，软件方向从接口与通信开始。
 
-```mermaid
-flowchart LR
-    A[单位和坐标] --> B[向量与矩阵]
-    B --> C[刚体变换与FK]
-    B --> D[惯量与动力学]
-    C --> E[导数与Jacobian]
-    E --> F[IK与优化]
-    G[函数与误差] --> H[导数与梯度]
-    H --> I[网络训练]
-    J[集合与概率] --> K[采样规划的保证]
-    L[函数与状态] --> M[类与线程]
-    M --> N[系统集成]
-    F --> N
-    D --> N
-```
+## 图、实验与参考阅读
 
-图不显示时按箭头文字阅读：坐标→矩阵→变换→Jacobian→IK；力矩加上矩阵→动力学；函数和误差→导数→训练；集合和概率→采样规划；函数和状态→并发→集成。
+| 资料 | 用途 |
+|---|---|
+| [逐步演示](assets/interactive/concept_player.html) · [动画与分镜](assets/animations/README.md) · [技术图示](assets/README.md) | 看清过程与几何关系 |
+| [交互课堂](INTERACTIVE.md) · [课堂首页](notebooks/00_start_here.ipynb) | 01–07基础，08–12原理专题，13–16工程带练 |
+| [基础实验](labs/README.md) · [算法实验](labs/ALGORITHMS.md) | 查运行命令、输入输出和限制 |
+| [参考数据](references/DATA_GUIDE.md) · [外部数据集](references/DATASETS.md) | 核对计算、模型声明和数据来源 |
+| [文献路线](references/READING_GUIDE.md) · [先修与深入阅读](handbook/16_prerequisites_and_deeper_topics.md) | 按问题选择书籍与论文 |
+| [项目地图](PROJECT_MAP.md) · [工具说明](TOOLS.md) · [来源索引](SOURCES.md) | 查团队文件与工具 |
+| [OpenMAIC参考方案](OPENMAIC.md) | 在线AI答疑的适配方案，非基础课安装要求 |
+| [验证记录](VALIDATION.md) | 查看实际检查范围；教学计算、模型声明和硬件实测分别记录 |
 
-## 第一周以后怎样选择
+本地课堂尚未部署公共网址。命令行运行基础计算时，在培训资料目录执行 `python labs/course_lab.py all`。
 
-先用一次学习时间补最影响自己的基础，再选一个方向连续学习。机械方向从结构与惯量进入任务、传动和动力学；运动方向从变换进入IK、控制和规划；感知AI方向从坐标、误差进入标定、估计和训练；软件方向从接口、通信进入并发、测试和集成。各方向最终仍需要理解其他模块的输入输出。
+## 学习安排与练习
 
-已有基础的人可以直接做每节自检。能解释过程且能处理换一个输入，就进入后续手册；只认得术语、不能说明单位或假设时，回到对应算例。延伸到研究层时使用[前置知识与文献路线](handbook/16_prerequisites_and_deeper_topics.md)。
+需要固定日程时，可按原七天安排每天约3小时：回顾20分钟、阅读40分钟、手算40分钟、实验50分钟、自检30分钟，休息与首次安装另留时间。也可以分次完成，按理解程度推进。工位实操与后续专题另行安排。
 
-## 自学记录
+专题建议拆成45分钟一段：矩阵、类与线程、高维规划各约两段；结构与动力学、总线电气、IK推导、网络训练、系统集成各约三段。这只是首次阅读与小例子的预算，完整工程实践需要更多时间。
 
-每次只记五行：今天要解决的问题；输入和单位；手算或程序结果；一个失败条件；下一步要读的小节。用[问题卡](templates/LEARNING_QUESTION.md)请教同事时附上这些记录。同事暂时没空时，可以继续不依赖这个问题的纸笔题。
+基础课以文末三题为自检。额外练习见[基础衔接题](assessments/FOUNDATION_BRIDGES.md)、[原题库](assessments/QUESTIONS.md)、[扩展题](assessments/EXTENDED_QUESTIONS.md)和[算法题](assessments/ALGORITHM_EXERCISES.md)。扩展项目用[结业评分表](assessments/CAPSTONE.md)，工程训练用[工程考核](assessments/ENGINEERING_CHECKPOINTS.md)与[任务报告](templates/ENGINEERING_LAB.md)。
+
+深入学习时记下问题、输入与单位、结果、一个失败条件和下一步即可。需要请教时用[问题卡](templates/LEARNING_QUESTION.md)。

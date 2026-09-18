@@ -1,14 +1,12 @@
 # 第一天｜先让机器人听懂一句话
 
-**本门工程课程：**[工程数学](../engineering/01_math.md)与[软件交付](../engineering/11_software.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
-
 [七天路线与本日过关](../WEEK_PLAN.md#day1) · [本日实验](../notebooks/01_units_and_code.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步
 
 今天从“把积木移到目标位置”开始，先拆任务，再给数字注明单位与坐标。明天描述手臂结构时，会直接用到今天的长度与位置约定。准备纸、笔和计算器；有电脑再运行程序。
 
-先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
+先读正文，再做本课实验和三道自检题。
 
 ## 第1步：把“大任务”拆成小问题
 
@@ -80,8 +78,6 @@ python labs/course_lab.py units
 
 明天我们把纸上的点连成两根可以转动的杆，学习长度、角度和重量怎样影响机器人。进入 [第二天](day02_body_and_urdf.md)。需要更多基础练习时看 [数学小台阶](../beginner/MATH_STEPS.md)。
 
-## 主线完成后再深入
-
-[本日扩展小课堂](../handbook/17_extension_workshops.md#day1)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。 类与线程另见[对象与并发](../handbook/17_extension_workshops.md#software)。
+需要矩阵、类与线程等专业内容时，去[扩展资料](../EXTENSIONS.md)。
 
 [返回七天路线](../WEEK_PLAN.md#day1) · [下一天](day02_body_and_urdf.md)

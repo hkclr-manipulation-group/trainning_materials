@@ -1,7 +1,5 @@
 # 第三天｜给机器人寄一封不会看错的信
 
-**本门工程课程：**[接口与网络](../engineering/03_interfaces.md)、[CAN FD](../engineering/04_canfd.md)和[EtherCAT](../engineering/05_ethercat.md)。基础概念完成后，继续做计算、实现、故障诊断和验收；完整安排见[工程课程总入口](../ENGINEERING_PATH.md)。
-
 [七天路线与本日过关](../WEEK_PLAN.md#day3) · [本日实验](../notebooks/03_communication.ipynb) · [运行方法](../INTERACTIVE.md)
 
 ## 先接上前一步
@@ -10,7 +8,7 @@
 
 昨天定义了关节与零位，今天把“哪个关节转多少”写成消息，并判断反馈是否新鲜。毫弧度先作为角度单位使用，明天再与度和三角函数联系起来。消息送达之后，我们才能继续问这些角度把工具带到哪里。
 
-先完成下面正文和三题自检。正文中的手册链接供需要时查阅；今天的扩展统一放在文末。
+先读正文，再做本课实验和三道自检题。
 
 ## 第1步：先区分四个时刻
 
@@ -59,11 +57,9 @@ TCP和UDP用于网络传输。TCP像连续送来的纸带，程序自己要找�
 
 不要立即重复发送运动指令：设备可能已经执行，只是反馈没回来。重复动作与重复查询的后果不同。
 
-## 第6步：自己使用观察工具
+## 第6步：把消息读完整
 
-有Wireshark时直接打开 [教学pcap](../labs/data/teaching_udp.pcap)，不需要接设备或启动抓包。用`udp.port == 5000`过滤，应看到4条消息；观察时间、方向和字节。没有软件就读CSV，也能完成主要问题。
-
-SPI练习数据在 [spi_mode0.csv](../labs/data/spi_mode0.csv)，先看CLK从0变1的行，再读同一行MOSI。8位应为10100101，也就是A5。完整操作见 [实验说明](../labs/ALGORITHMS.md)。
+今天完成字段解读和超时判断即可。想用抓包、SPI数据或协议工具练习时，去[扩展资料](../EXTENSIONS.md)。
 
 ## 今天自检
 
@@ -73,8 +69,6 @@ SPI练习数据在 [spi_mode0.csv](../labs/data/spi_mode0.csv)，先看CLK从0�
 
 现在知道怎样可靠描述命令了。下一天回答更核心的问题：要到某个位置，两个关节到底该转多少？进入 [第四天](day04_control.md)。
 
-## 主线完成后再深入
-
-[本日扩展小课堂](../handbook/17_extension_workshops.md#day3)提供先修、算例、自检与参考资料；[扩展选课表](../EXTENSIONS.md)列出所有暂缓主题及建议学习顺序。
+需要协议分层、抓包、CAN FD或EtherCAT时，去[扩展资料](../EXTENSIONS.md)。
 
 [上一天](day02_body_and_urdf.md) · [返回七天路线](../WEEK_PLAN.md#day3) · [下一天](day04_control.md)
