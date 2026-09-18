@@ -44,12 +44,8 @@
 
 本地课堂尚未部署公共网址。命令行运行基础计算时，在培训资料目录执行 `python labs/course_lab.py all`。
 
-## 学习安排与练习
-
-需要固定日程时，可按原七天安排每天约3小时：回顾20分钟、阅读40分钟、手算40分钟、实验50分钟、自检30分钟，休息与首次安装另留时间。也可以分次完成，按理解程度推进。工位实操与后续专题另行安排。
-
-专题建议拆成45分钟一段：矩阵、类与线程、高维规划各约两段；结构与动力学、总线电气、IK推导、网络训练、系统集成各约三段。这只是首次阅读与小例子的预算，完整工程实践需要更多时间。
+## 练习与记录
 
 基础课以文末三题为自检。额外练习见[基础衔接题](assessments/FOUNDATION_BRIDGES.md)、[原题库](assessments/QUESTIONS.md)、[扩展题](assessments/EXTENDED_QUESTIONS.md)和[算法题](assessments/ALGORITHM_EXERCISES.md)。扩展项目用[结业评分表](assessments/CAPSTONE.md)，工程训练用[工程考核](assessments/ENGINEERING_CHECKPOINTS.md)与[任务报告](templates/ENGINEERING_LAB.md)。
 
-深入学习时记下问题、输入与单位、结果、一个失败条件和下一步即可。需要请教时用[问题卡](templates/LEARNING_QUESTION.md)。
+按当前问题选一个专题即可。深入时记下问题、输入与单位、结果、一个失败条件和下一步；需要请教时用[问题卡](templates/LEARNING_QUESTION.md)。
